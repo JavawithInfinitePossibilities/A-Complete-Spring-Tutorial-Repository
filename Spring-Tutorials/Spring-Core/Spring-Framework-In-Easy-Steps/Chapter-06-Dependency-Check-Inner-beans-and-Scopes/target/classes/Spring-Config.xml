@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd
+    http://www.springframework.org/schema/util 
+    http://www.springframework.org/schema/util/spring-util.xsd">
+
+	<bean id="patient" class="com.tutorials.sid.spring.Prescription"
+		p:id="10" p:patientName="Sidhanth">
+		<!-- p:medicines-ref="medicinesList" -->
+	</bean>
+	<util:list id="medicinesList"
+		list-class="java.util.LinkedList" value-type="java.lang.String">
+		<value>medicines-1</value>
+		<value>medicines-2</value>
+		<value>medicines-3</value>
+	</util:list>
+	<bean
+		class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor" />
+
+	<bean id="employee" class="com.tutorials.sid.spring.Employee"
+		p:id="1" p:name="Siddhant" scope="prototype">
+		<property name="address">
+			<bean class="com.tutorials.sid.spring.Address" p:houseNo="304"
+				p:buildingName="Dwarikamai Residency" p:streetName="JCR Layout"
+				p:pin="560103" />
+		</property>
+	</bean>
+</beans>

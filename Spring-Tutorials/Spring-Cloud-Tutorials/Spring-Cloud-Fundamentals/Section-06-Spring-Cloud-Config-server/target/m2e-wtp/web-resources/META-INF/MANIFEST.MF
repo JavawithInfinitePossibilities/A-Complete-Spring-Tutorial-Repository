@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Build-Jdk-Spec: 12
+Implementation-Title: Section-06-Spring-Cloud-Config-server
+Implementation-Version: 2.4.2
+Main-Class: com.tutorials.sid.spring.Section06SpringCloudConfigserver
+Created-By: Maven Integration for Eclipse
+

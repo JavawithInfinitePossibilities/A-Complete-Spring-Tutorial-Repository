@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Build-Jdk-Spec: 12
+Implementation-Title: Section-04-Spring-Cloud-Zuul-Proxy-Server
+Implementation-Version: 2.4.2
+Main-Class: com.tutorials.sid.spring.Section04SpringCloudZuulProxyServer
+Created-By: Maven Integration for Eclipse
+

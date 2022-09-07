@@ -1,0 +1,15 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.tutorials.sid.spring</groupId>
+    <artifactId>Spring-Tutorials</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <artifactId>Spring-Hibernate-Tutorials</artifactId>
+  <packaging>pom</packaging>
+  <name>Spring-Hibernate-Tutorials</name>
+  <description>Spring-Hibernate-Tutorials</description>
+  <modules>
+  	<module>Hibernate-jpa-tutorial-for-beginners-in-100-steps</module>
+  </modules>
+</project>

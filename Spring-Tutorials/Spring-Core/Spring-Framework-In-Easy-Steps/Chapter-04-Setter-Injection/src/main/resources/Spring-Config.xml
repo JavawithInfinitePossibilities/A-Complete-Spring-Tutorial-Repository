@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd
+    http://www.springframework.org/schema/util 
+    http://www.springframework.org/schema/util/spring-util.xsd">
+
+	<bean id="springCoreBean"
+		class="com.tutorials.sid.spring.bean.SpringCoreBean"
+		name="employee,emp">
+		<property name="id" value="1" />
+		<property name="name" value="Siddhant"></property>
+	</bean>
+
+	<bean id="springCoreBeanPName"
+		class="com.tutorials.sid.spring.bean.SpringCoreBean" p:id="2"
+		p:name="SiddhantSahu" />
+
+	<bean id="hospital"
+		class="com.tutorials.sid.spring.bean.collection.List.Hospital"
+		name="hspital" p:name="NH">
+		<property name="department">
+			<list>
+				<value>Front Office</value>
+				<value>In Patient</value>
+				<value>Out
+					Patient
+				</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="hospitalUtilList"
+		class="com.tutorials.sid.spring.bean.collection.List.Hospital"
+		p:name="NH">
+		<property name="department" ref="listDepartment" />
+	</bean>
+	<bean id="carDealer"
+		class="com.tutorials.sid.spring.bean.collection.Set.CarDealer"
+		name="cDealer" p:name="CarDekho.Com">
+		<property name="models">
+			<set>
+				<value>BMW</value>
+				<value>Marcedes</value>
+				<value>Toyota</value>
+				<value>BMW</value>
+			</set>
+		</property>
+	</bean>
+	<bean id="customer"
+		class="com.tutorials.sid.spring.bean.collection.Map.Customer"
+		name="Siddhant" p:id="1">
+		<property name="product">
+			<map>
+				<entry>
+					<key>
+						<value>100</value>
+					</key>
+					<value>iphone</value>
+				</entry>
+				<entry key="120" value="ipad" />
+				<entry key="150">
+					<value>Apple watch</value>
+				</entry>
+				<entry value="Macbook Pro">
+					<key>
+						<value>200</value>
+					</key>
+				</entry>
+			</map>
+		</property>
+	</bean>
+	<bean id="countryAndLanguages"
+		class="com.tutorials.sid.spring.bean.collection.properties.CountryAndLanguage">
+		<property name="countryAndLanguage">
+			<props>
+				<prop key="India">Hindi</prop>
+				<prop key="USA">English</prop>
+			</props>
+		</property>
+	</bean>
+
+	<bean id="score"
+		class="com.tutorials.sid.spring.bean.reftype.Scores" p:math="100"
+		p:physics="100" p:chemistry="100" />
+
+	<bean id="student"
+		class="com.tutorials.sid.spring.bean.reftype.Student" p:rollNo="1">
+		<property name="scores">
+			<ref bean="score" />
+		</property>
+	</bean>
+
+
+	<bean id="item" class="com.tutorials.sid.spring.bean.reftype.Item"
+		p:id="1" p:name="laptop" p:price="1000.10" p:quantity="1" />
+
+	<bean name="flipcart"
+		class="com.tutorials.sid.spring.bean.reftype.ShoppingCart"
+		p:item-ref="item">
+		<property name="cartName" value="flipcart" />
+		<!-- <property name="item" ref="item" /> -->
+	</bean>
+	<util:list id="listDepartment"
+		list-class="java.util.LinkedList" value-type="java.lang.String">
+		<value>Front Office</value>
+		<value>In Patient</value>
+		<value>Out Patient</value>
+	</util:list>
+</beans>

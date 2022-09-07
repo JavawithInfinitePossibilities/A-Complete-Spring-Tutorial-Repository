@@ -1,0 +1,23 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.tutorials.sid.spring</groupId>
+		<artifactId>Spring-Tutorials</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+
+	<artifactId>Spring-Boot-Tutorials</artifactId>
+	<packaging>pom</packaging>
+	<name>Spring-Boot-Tutorials</name>
+
+	<modules>
+		<module>Learn-Spring-boot-in-simple-steps</module>
+		<module>Spring-boot-tutorial-for-beginners</module>
+		<module>
+  		Master-Java-Web-Services-and-RESTful-API-with-Spring-Boot
+  	</module>
+	</modules>
+</project>

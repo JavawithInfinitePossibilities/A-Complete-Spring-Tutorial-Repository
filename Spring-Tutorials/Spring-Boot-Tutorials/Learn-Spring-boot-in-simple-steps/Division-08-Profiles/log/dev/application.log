@@ -1,0 +1,55 @@
+2022-07-12 01:14:35.388  INFO 3712 --- [main] c.t.sid.spring.Division08Profiles        : Starting Division08Profiles using Java 12.0.2 on DESKTOP-8HSI2JK with PID 3712 (D:\workspace\Spring-Tutorials\Spring-Boot-Tutorials\Learn-Spring-boot-in-simple-steps\Division-08-Profiles\target\classes started by Lenovo in D:\workspace\Spring-Tutorials\Spring-Boot-Tutorials\Learn-Spring-boot-in-simple-steps\Division-08-Profiles)
+2022-07-12 01:14:35.391  INFO 3712 --- [main] c.t.sid.spring.Division08Profiles        : The following profiles are active: dev
+2022-07-12 01:14:36.043  INFO 3712 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-07-12 01:14:36.122  INFO 3712 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 60 ms. Found 2 JPA repository interfaces.
+2022-07-12 01:14:36.639  INFO 3712 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-07-12 01:14:36.649  INFO 3712 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-12 01:14:36.650  INFO 3712 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-07-12 01:14:36.755  INFO 3712 --- [main] o.a.c.c.C.[.[localhost].[/productmart]   : Initializing Spring embedded WebApplicationContext
+2022-07-12 01:14:36.756  INFO 3712 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1316 ms
+2022-07-12 01:14:36.913  INFO 3712 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-07-12 01:14:37.232  INFO 3712 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-07-12 01:14:37.298  INFO 3712 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-12 01:14:37.372  INFO 3712 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.27.Final
+2022-07-12 01:14:37.565  INFO 3712 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-12 01:14:37.723  INFO 3712 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-07-12 01:14:38.286  INFO 3712 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-12 01:14:38.298  INFO 3712 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-07-12 01:14:38.795  WARN 3712 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-07-12 01:14:38.887  INFO 3712 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-12 01:14:39.125  INFO 3712 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/productmart'
+2022-07-12 01:14:39.134  INFO 3712 --- [main] c.t.sid.spring.Division08Profiles        : Started Division08Profiles in 4.272 seconds (JVM running for 5.546)
+2022-07-12 01:18:12.915  INFO 3712 --- [RMI TCP Connection(8)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2022-07-12 01:18:13.384  INFO 3712 --- [RMI TCP Connection(8)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-07-12 01:18:13.385  INFO 3712 --- [RMI TCP Connection(8)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-07-12 01:18:13.387  INFO 3712 --- [RMI TCP Connection(8)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-07-12 01:18:13.402  INFO 3712 --- [RMI TCP Connection(8)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-07-12 01:18:44.707  INFO 17368 --- [main] c.t.sid.spring.Division08Profiles        : Starting Division08Profiles using Java 12.0.2 on DESKTOP-8HSI2JK with PID 17368 (D:\workspace\Spring-Tutorials\Spring-Boot-Tutorials\Learn-Spring-boot-in-simple-steps\Division-08-Profiles\target\classes started by Lenovo in D:\workspace\Spring-Tutorials\Spring-Boot-Tutorials\Learn-Spring-boot-in-simple-steps\Division-08-Profiles)
+2022-07-12 01:18:44.710  INFO 17368 --- [main] c.t.sid.spring.Division08Profiles        : The following profiles are active: dev
+2022-07-12 01:18:45.338  INFO 17368 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-07-12 01:18:45.420  INFO 17368 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 64 ms. Found 2 JPA repository interfaces.
+2022-07-12 01:18:45.922  INFO 17368 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-07-12 01:18:45.931  INFO 17368 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-12 01:18:45.931  INFO 17368 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-07-12 01:18:46.045  INFO 17368 --- [main] o.a.c.c.C.[.[localhost].[/productmart]   : Initializing Spring embedded WebApplicationContext
+2022-07-12 01:18:46.045  INFO 17368 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1284 ms
+2022-07-12 01:18:46.205  INFO 17368 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-07-12 01:18:46.513  INFO 17368 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-07-12 01:18:46.598  INFO 17368 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-12 01:18:46.676  INFO 17368 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.27.Final
+2022-07-12 01:18:46.867  INFO 17368 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-12 01:18:47.027  INFO 17368 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-07-12 01:18:47.608  INFO 17368 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-12 01:18:47.618  INFO 17368 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-07-12 01:18:48.117  WARN 17368 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-07-12 01:18:48.208  INFO 17368 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-12 01:18:48.443  INFO 17368 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/productmart'
+2022-07-12 01:18:48.452  INFO 17368 --- [main] c.t.sid.spring.Division08Profiles        : Started Division08Profiles in 4.135 seconds (JVM running for 5.32)
+2022-07-12 01:19:15.463  INFO 17368 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/productmart]   : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-12 01:19:15.465  INFO 17368 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-07-12 01:19:15.466  INFO 17368 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-07-12 01:23:20.076  INFO 17368 --- [RMI TCP Connection(8)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2022-07-12 01:23:20.638  INFO 17368 --- [RMI TCP Connection(8)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-07-12 01:23:20.640  INFO 17368 --- [RMI TCP Connection(8)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-07-12 01:23:20.642  INFO 17368 --- [RMI TCP Connection(8)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-07-12 01:23:20.657  INFO 17368 --- [RMI TCP Connection(8)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

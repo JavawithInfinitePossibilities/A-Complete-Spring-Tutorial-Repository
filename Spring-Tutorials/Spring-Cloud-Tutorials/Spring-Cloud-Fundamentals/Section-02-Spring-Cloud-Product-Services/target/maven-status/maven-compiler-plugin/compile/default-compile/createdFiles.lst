@@ -1,0 +1,5 @@
+com\tutorials\sid\spring\model\db\Product.class
+com\tutorials\sid\spring\model\dto\Coupon.class
+com\tutorials\sid\spring\repo\IProductRepo.class
+com\tutorials\sid\spring\Section02SpringCloudProductServices.class
+com\tutorials\sid\spring\controller\ProductRESTController.class
