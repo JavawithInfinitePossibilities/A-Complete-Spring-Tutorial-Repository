@@ -1,9 +1,0 @@
-Manifest-Version: 1.0
-Build-Jdk-Spec: 12
-Implementation-Title: Section-03-Introduction-to-Spring-Framework-in-10-
- Steps
-Implementation-Version: 2.4.2
-Main-Class: com.tutorials.sid.spring.Section03IntroductiontoSpringFramew
- orkin10Steps
-Created-By: Maven Integration for Eclipse
-
