@@ -1,0 +1,1151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="web" name="Web63">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Spring-boot-tutorial-for-beginners/Section-03-Introduction-to-JUnit-in-5-Steps/src/main/webapp/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Spring-boot-tutorial-for-beginners/Section-03-Introduction-to-JUnit-in-5-Steps/src/main/webapp" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web62">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Learn-Spring-boot-in-simple-steps/Division-05-Spring-Data-JPA/src/main/webapp/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Learn-Spring-boot-in-simple-steps/Division-05-Spring-Data-JPA/src/main/webapp" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web65">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Core/Spring-Framework-In-Easy-Steps/Chapter-08-Using-Properties/target/Chapter-08-Using-Properties/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Core/Spring-Framework-In-Easy-Steps/Chapter-08-Using-Properties/target/Chapter-08-Using-Properties" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web64">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Cloud-Tutorials/Spring-Cloud-Fundamentals/Section-06-Spring-Cloud-Config-server/target/Section-06-Spring-Cloud-Config-server/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Cloud-Tutorials/Spring-Cloud-Fundamentals/Section-06-Spring-Cloud-Config-server/target/Section-06-Spring-Cloud-Config-server" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web67">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Learn-Spring-boot-in-simple-steps/Division-08-Profiles/target/Division-05-Spring-Data-JPA/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Learn-Spring-boot-in-simple-steps/Division-08-Profiles/target/Division-05-Spring-Data-JPA" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web101">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Learn-Spring-boot-in-simple-steps/Division-12-Thymeleaf/target/Division-05-Spring-Data-JPA/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Learn-Spring-boot-in-simple-steps/Division-12-Thymeleaf/target/Division-05-Spring-Data-JPA" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web66">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Learn-Spring-boot-in-simple-steps/Division-09-Logging/target/Division-05-Spring-Data-JPA/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Learn-Spring-boot-in-simple-steps/Division-09-Logging/target/Division-05-Spring-Data-JPA" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web102">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Cloud-Tutorials/Spring-Cloud-Fundamentals/Section-04-Spring-Cloud-Zuul-Proxy-Server/target/Section-04-Spring-Cloud-Zuul-Proxy-Server-2.4.2/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Cloud-Tutorials/Spring-Cloud-Fundamentals/Section-04-Spring-Cloud-Zuul-Proxy-Server/target/Section-04-Spring-Cloud-Zuul-Proxy-Server-2.4.2" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web69">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Core/Spring-Framework-In-Easy-Steps/Chapter-17-Sending-data-from-Controller-to-UI/src/main/webapp/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Core/Spring-Framework-In-Easy-Steps/Chapter-17-Sending-data-from-Controller-to-UI/src/main/webapp" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web68">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Spring-boot-tutorial-for-beginners/Section-01-Introduction-of-Spring-boot/target/Section-01-Introduction-of-Spring-boot/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Spring-boot-tutorial-for-beginners/Section-01-Introduction-of-Spring-boot/target/Section-01-Introduction-of-Spring-boot" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web100">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Learn-Spring-boot-in-simple-steps/Division-01-Introduction/target/Division-01-Introduction/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Learn-Spring-boot-in-simple-steps/Division-01-Introduction/target/Division-01-Introduction" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web61">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Core/Spring-Framework-In-Easy-Steps/Chapter-09-Auto-Wiring/target/Chapter-09-Auto-Wiring/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Core/Spring-Framework-In-Easy-Steps/Chapter-09-Auto-Wiring/target/Chapter-09-Auto-Wiring" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web60">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Core/Spring-Framework-In-Easy-Steps/Chapter-17-Sending-data-from-Controller-to-UI/target/Chapter-17-Sending-data-from-Controller-to-UI/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Core/Spring-Framework-In-Easy-Steps/Chapter-17-Sending-data-from-Controller-to-UI/target/Chapter-17-Sending-data-from-Controller-to-UI" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web59">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Core/Spring-Framework-In-Easy-Steps/Chapter-14-Spring-JDBC/src/main/webapp/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Core/Spring-Framework-In-Easy-Steps/Chapter-14-Spring-JDBC/src/main/webapp" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web52">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Learn-Spring-boot-in-simple-steps/Division-14-Spring-Batch-DB-Operation/target/Division-05-Spring-Data-JPA/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Learn-Spring-boot-in-simple-steps/Division-14-Spring-Batch-DB-Operation/target/Division-05-Spring-Data-JPA" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web51">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Master-Java-Web-Services-and-RESTful-API-with-Spring-Boot/Section-07-Introduction-to-JPA-in-10-Steps/src/main/webapp/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Master-Java-Web-Services-and-RESTful-API-with-Spring-Boot/Section-07-Introduction-to-JPA-in-10-Steps/src/main/webapp" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web54">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Learn-Spring-boot-in-simple-steps/Division-05-Spring-Data-JPA/target/Division-05-Spring-Data-JPA/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Learn-Spring-boot-in-simple-steps/Division-05-Spring-Data-JPA/target/Division-05-Spring-Data-JPA" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web53">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Core/Spring-Framework-In-Easy-Steps/Chapter-02-Software-Setup/target/Chapter-02-Software-Setup/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Core/Spring-Framework-In-Easy-Steps/Chapter-02-Software-Setup/target/Chapter-02-Software-Setup" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web56">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Spring-boot-tutorial-for-beginners/Section-05-Spring-Boot-Deep-Dive-with-a-simple-API/src/main/webapp/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Spring-boot-tutorial-for-beginners/Section-05-Spring-Boot-Deep-Dive-with-a-simple-API/src/main/webapp" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web55">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Master-Java-Web-Services-and-RESTful-API-with-Spring-Boot/Section-03-Introduction-to-Spring-Framework-in-10-Steps/src/main/webapp/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Master-Java-Web-Services-and-RESTful-API-with-Spring-Boot/Section-03-Introduction-to-Spring-Framework-in-10-Steps/src/main/webapp" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web58">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Spring-boot-tutorial-for-beginners/Section-06-Introduction-to-JPA-With-Spring-Boot-in-10-Steps/target/Section-06-Introduction-to-JPA-With-Spring-Boot-in-10-Steps/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Spring-boot-tutorial-for-beginners/Section-06-Introduction-to-JPA-With-Spring-Boot-in-10-Steps/target/Section-06-Introduction-to-JPA-With-Spring-Boot-in-10-Steps" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web57">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Cloud-Tutorials/Spring-Cloud-Fundamentals/Section-05-Spring-Cloud-API-Gateway-Server/target/Section-05-Spring-Cloud-API-Gateway-Server/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Cloud-Tutorials/Spring-Cloud-Fundamentals/Section-05-Spring-Cloud-API-Gateway-Server/target/Section-05-Spring-Cloud-API-Gateway-Server" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Cloud-Tutorials/Spring-Cloud-Fundamentals/Section-02-Spring-Cloud-Product-Services/target/Section-02-Spring-Cloud-Product-Services/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Cloud-Tutorials/Spring-Cloud-Fundamentals/Section-02-Spring-Cloud-Product-Services/target/Section-02-Spring-Cloud-Product-Services" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web50">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Spring-boot-tutorial-for-beginners/Section-01-Introduction-of-Spring-boot/src/main/webapp/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Spring-boot-tutorial-for-beginners/Section-01-Introduction-of-Spring-boot/src/main/webapp" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web49">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Core/Spring-Framework-In-Easy-Steps/Chapter-09-Auto-Wiring/src/main/webapp/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Core/Spring-Framework-In-Easy-Steps/Chapter-09-Auto-Wiring/src/main/webapp" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web48">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Core/Spring-Framework-In-Easy-Steps/Chapter-14-Spring-JDBC/target/Chapter-14-Spring-JDBC/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Core/Spring-Framework-In-Easy-Steps/Chapter-14-Spring-JDBC/target/Chapter-14-Spring-JDBC" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web41">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Core/Spring-Framework-In-Easy-Steps/Chapter-08-Using-Properties/src/main/webapp/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Core/Spring-Framework-In-Easy-Steps/Chapter-08-Using-Properties/src/main/webapp" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web40">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Core/Spring-Framework-In-Easy-Steps/Chapter-16-Spring-MVC/src/main/webapp/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Core/Spring-Framework-In-Easy-Steps/Chapter-16-Spring-MVC/src/main/webapp" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web43">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Core/Spring-Framework-In-Easy-Steps/Chapter-21-Spring-MVC-and-AJAX-Using-JQuery/src/main/webapp/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Core/Spring-Framework-In-Easy-Steps/Chapter-21-Spring-MVC-and-AJAX-Using-JQuery/src/main/webapp" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web42">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Master-Java-Web-Services-and-RESTful-API-with-Spring-Boot/Section-08-Connecting-RESTful-Web-Service-to-JPA/target/Section-08-Connecting-RESTful-Web-Service-to-JPA/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Master-Java-Web-Services-and-RESTful-API-with-Spring-Boot/Section-08-Connecting-RESTful-Web-Service-to-JPA/target/Section-08-Connecting-RESTful-Web-Service-to-JPA" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web45">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Cloud-Tutorials/Spring-Cloud-Fundamentals/Section-06-Spring-Cloud-Config-server/src/main/webapp/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Cloud-Tutorials/Spring-Cloud-Fundamentals/Section-06-Spring-Cloud-Config-server/src/main/webapp" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web44">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Learn-Spring-boot-in-simple-steps/Division-11-Spring-Security/target/Division-05-Spring-Data-JPA/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Learn-Spring-boot-in-simple-steps/Division-11-Spring-Security/target/Division-05-Spring-Data-JPA" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web47">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Core/Spring-Framework-In-Easy-Steps/Chapter-22-Spring-AOP/target/Chapter-22-Spring-AOP/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Core/Spring-Framework-In-Easy-Steps/Chapter-22-Spring-AOP/target/Chapter-22-Spring-AOP" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web46">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Learn-Spring-boot-in-simple-steps/Division-07-Creating-a-REST-Client/src/main/webapp/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Learn-Spring-boot-in-simple-steps/Division-07-Creating-a-REST-Client/src/main/webapp" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web114">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Master-Java-Web-Services-and-RESTful-API-with-Spring-Boot/Section-02-Introduction-To-Web-Services/src/main/webapp/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Master-Java-Web-Services-and-RESTful-API-with-Spring-Boot/Section-02-Introduction-To-Web-Services/src/main/webapp" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web3">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Learn-Spring-boot-in-simple-steps/Division-11-Spring-Security/src/main/webapp/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Learn-Spring-boot-in-simple-steps/Division-11-Spring-Security/src/main/webapp" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web2">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Learn-Spring-boot-in-simple-steps/Division-08-Profiles/src/main/webapp/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Learn-Spring-boot-in-simple-steps/Division-08-Profiles/src/main/webapp" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web38">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Core/Spring-Framework-In-Easy-Steps/Chapter-02-Software-Setup/src/main/webapp/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Core/Spring-Framework-In-Easy-Steps/Chapter-02-Software-Setup/src/main/webapp" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web37">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Cloud-Tutorials/Spring-Cloud-Fundamentals/Section-05-Spring-Cloud-API-Gateway-Server/src/main/webapp/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Cloud-Tutorials/Spring-Cloud-Fundamentals/Section-05-Spring-Cloud-API-Gateway-Server/src/main/webapp" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web39">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Core/Spring-Framework-In-Easy-Steps/Chapter-15-Spring-ORM/src/main/webapp/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Core/Spring-Framework-In-Easy-Steps/Chapter-15-Spring-ORM/src/main/webapp" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web30">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Core/Spring-Framework-In-Easy-Steps/Chapter-10-Standalone-Collections/src/main/webapp/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Core/Spring-Framework-In-Easy-Steps/Chapter-10-Standalone-Collections/src/main/webapp" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web32">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Core/Spring-Framework-In-Easy-Steps/Chapter-20-Spring-MVC-and-ORM/target/Chapter-20-Spring-MVC-and-ORM/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Core/Spring-Framework-In-Easy-Steps/Chapter-20-Spring-MVC-and-ORM/target/Chapter-20-Spring-MVC-and-ORM" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web31">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Learn-Spring-boot-in-simple-steps/Division-14-Spring-Batch-DB-Operation/src/main/webapp/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Learn-Spring-boot-in-simple-steps/Division-14-Spring-Batch-DB-Operation/src/main/webapp" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web34">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Spring-boot-tutorial-for-beginners/Section-04-Introduction-to-Mockito-in-5-Steps/target/Section-04-Introduction-to-Mockito-in-5-Steps/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Spring-boot-tutorial-for-beginners/Section-04-Introduction-to-Mockito-in-5-Steps/target/Section-04-Introduction-to-Mockito-in-5-Steps" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web112">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Cloud-Tutorials/Spring-Cloud-Fundamentals/Section-03-Spring-Cloud-Eureka-Server/target/Section-03-Spring-Cloud-Eureka-Server-2.4.2/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Cloud-Tutorials/Spring-Cloud-Fundamentals/Section-03-Spring-Cloud-Eureka-Server/target/Section-03-Spring-Cloud-Eureka-Server-2.4.2" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web33">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Learn-Spring-boot-in-simple-steps/Division-10-Health-Check-and-Metrics/target/Division-05-Spring-Data-JPA/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Learn-Spring-boot-in-simple-steps/Division-10-Health-Check-and-Metrics/target/Division-05-Spring-Data-JPA" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web113">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Spring-boot-tutorial-for-beginners/Section-02-Web-Application-with-Spring-Boot/src/main/webapp/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Spring-boot-tutorial-for-beginners/Section-02-Web-Application-with-Spring-Boot/src/main/webapp" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web36">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Spring-boot-tutorial-for-beginners/Section-06-Introduction-to-JPA-With-Spring-Boot-in-10-Steps/src/main/webapp/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Spring-boot-tutorial-for-beginners/Section-06-Introduction-to-JPA-With-Spring-Boot-in-10-Steps/src/main/webapp" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web110">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Master-Java-Web-Services-and-RESTful-API-with-Spring-Boot/Section-04-Introduction-to-Spring-Boot-in-10-Steps/src/main/webapp/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Master-Java-Web-Services-and-RESTful-API-with-Spring-Boot/Section-04-Introduction-to-Spring-Boot-in-10-Steps/src/main/webapp" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web35">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Learn-Spring-boot-in-simple-steps/Division-01-Introduction/src/main/webapp/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Learn-Spring-boot-in-simple-steps/Division-01-Introduction/src/main/webapp" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web111">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Core/Spring-Framework-In-Easy-Steps/Chapter-07-Constructor-Injection/src/main/webapp/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Core/Spring-Framework-In-Easy-Steps/Chapter-07-Constructor-Injection/src/main/webapp" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web105">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Learn-Spring-boot-in-simple-steps/Division-16-Messaging-and-Spring-JMS/target/Division-05-Spring-Data-JPA/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Learn-Spring-boot-in-simple-steps/Division-16-Messaging-and-Spring-JMS/target/Division-05-Spring-Data-JPA" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web106">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Cloud-Tutorials/Spring-Cloud-Fundamentals/Section-01-Spring-Cloud-Coupon-Services/src/main/webapp/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Cloud-Tutorials/Spring-Cloud-Fundamentals/Section-01-Spring-Cloud-Coupon-Services/src/main/webapp" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web103">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Core/Spring-Framework-In-Easy-Steps/Chapter-06-Dependency-Check-Inner-beans-and-Scopes/src/main/webapp/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Core/Spring-Framework-In-Easy-Steps/Chapter-06-Dependency-Check-Inner-beans-and-Scopes/src/main/webapp" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web104">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Core/Spring-Framework-In-Easy-Steps/Chapter-21-Spring-MVC-and-AJAX-Using-JQuery/target/Chapter-21-Spring-MVC-and-AJAX-Using-JQuery/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Core/Spring-Framework-In-Easy-Steps/Chapter-21-Spring-MVC-and-AJAX-Using-JQuery/target/Chapter-21-Spring-MVC-and-AJAX-Using-JQuery" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web109">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Spring-boot-tutorial-for-beginners/Section-07-Connecting-Web-Application-with-JPA/target/Section-07-Connecting-Web-Application-with-JPA/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Spring-boot-tutorial-for-beginners/Section-07-Connecting-Web-Application-with-JPA/target/Section-07-Connecting-Web-Application-with-JPA" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web107">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Learn-Spring-boot-in-simple-steps/Division-13-Database-caching/src/main/webapp/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Learn-Spring-boot-in-simple-steps/Division-13-Database-caching/src/main/webapp" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web108">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Learn-Spring-boot-in-simple-steps/Division-15-Unit-Testing-using-MockMvc/src/main/webapp/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Learn-Spring-boot-in-simple-steps/Division-15-Unit-Testing-using-MockMvc/src/main/webapp" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web27">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Core/Spring-Framework-In-Easy-Steps/Chapter-19-Using-ModelMap-and-String-View/target/Chapter-19-Using-ModelMap-and-String-View/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Core/Spring-Framework-In-Easy-Steps/Chapter-19-Using-ModelMap-and-String-View/target/Chapter-19-Using-ModelMap-and-String-View" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web26">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Learn-Spring-boot-in-simple-steps/Division-02-Software-Setup/target/Division-03-Basics/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Learn-Spring-boot-in-simple-steps/Division-02-Software-Setup/target/Division-03-Basics" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web29">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Learn-Spring-boot-in-simple-steps/Division-13-Database-caching/target/Division-05-Spring-Data-JPA/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Learn-Spring-boot-in-simple-steps/Division-13-Database-caching/target/Division-05-Spring-Data-JPA" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web28">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Core/Spring-Framework-In-Easy-Steps/Chapter-11-Stereotype-Annotations/src/main/webapp/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Core/Spring-Framework-In-Easy-Steps/Chapter-11-Stereotype-Annotations/src/main/webapp" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web21">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Master-Java-Web-Services-and-RESTful-API-with-Spring-Boot/Section-02-Introduction-To-Web-Services/target/Section-02-Introduction-To-Web-Services/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Master-Java-Web-Services-and-RESTful-API-with-Spring-Boot/Section-02-Introduction-To-Web-Services/target/Section-02-Introduction-To-Web-Services" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web20">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Learn-Spring-boot-in-simple-steps/Division-15-Unit-Testing-using-MockMvc/target/Division-05-Spring-Data-JPA/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Learn-Spring-boot-in-simple-steps/Division-15-Unit-Testing-using-MockMvc/target/Division-05-Spring-Data-JPA" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web23">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Core/Spring-Framework-In-Easy-Steps/Chapter-13-Injecting-Interfaces/src/main/webapp/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Core/Spring-Framework-In-Easy-Steps/Chapter-13-Injecting-Interfaces/src/main/webapp" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web22">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Learn-Spring-boot-in-simple-steps/Division-14-Spring-Batch/target/Division-05-Spring-Data-JPA/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Learn-Spring-boot-in-simple-steps/Division-14-Spring-Batch/target/Division-05-Spring-Data-JPA" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web25">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Master-Java-Web-Services-and-RESTful-API-with-Spring-Boot/Section-08-Connecting-RESTful-Web-Service-to-JPA/src/main/webapp/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Master-Java-Web-Services-and-RESTful-API-with-Spring-Boot/Section-08-Connecting-RESTful-Web-Service-to-JPA/src/main/webapp" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web24">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Spring-boot-tutorial-for-beginners/Section-02-Web-Application-with-Spring-Boot/target/Section-02-Web-Application-with-Spring-Boot/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Spring-boot-tutorial-for-beginners/Section-02-Web-Application-with-Spring-Boot/target/Section-02-Web-Application-with-Spring-Boot" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web16">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Cloud-Tutorials/Spring-Cloud-Fundamentals/Section-01-Spring-Cloud-Coupon-Services/target/Section-01-Spring-Cloud-Coupon-Services/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Cloud-Tutorials/Spring-Cloud-Fundamentals/Section-01-Spring-Cloud-Coupon-Services/target/Section-01-Spring-Cloud-Coupon-Services" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web15">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Learn-Spring-boot-in-simple-steps/Division-10-Health-Check-and-Metrics/src/main/webapp/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Learn-Spring-boot-in-simple-steps/Division-10-Health-Check-and-Metrics/src/main/webapp" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web18">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Spring-boot-tutorial-for-beginners/Section-04-Introduction-to-Mockito-in-5-Steps/src/main/webapp/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Spring-boot-tutorial-for-beginners/Section-04-Introduction-to-Mockito-in-5-Steps/src/main/webapp" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web17">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Core/Spring-Framework-In-Easy-Steps/Chapter-03-Spring-Core-Concepts/src/main/webapp/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Core/Spring-Framework-In-Easy-Steps/Chapter-03-Spring-Core-Concepts/src/main/webapp" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web19">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Master-Java-Web-Services-and-RESTful-API-with-Spring-Boot/Section-04-Introduction-to-Spring-Boot-in-10-Steps/target/Section-04-Introduction-to-Spring-Boot-in-10-Steps/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Master-Java-Web-Services-and-RESTful-API-with-Spring-Boot/Section-04-Introduction-to-Spring-Boot-in-10-Steps/target/Section-04-Introduction-to-Spring-Boot-in-10-Steps" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web5">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Core/Spring-Framework-In-Easy-Steps/Chapter-19-Using-ModelMap-and-String-View/src/main/webapp/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Core/Spring-Framework-In-Easy-Steps/Chapter-19-Using-ModelMap-and-String-View/src/main/webapp" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web96">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Learn-Spring-boot-in-simple-steps/Division-06-Create-REST-CRUD-API/src/main/webapp/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Learn-Spring-boot-in-simple-steps/Division-06-Create-REST-CRUD-API/src/main/webapp" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web4">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Learn-Spring-boot-in-simple-steps/Division-14-Spring-Batch/src/main/webapp/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Learn-Spring-boot-in-simple-steps/Division-14-Spring-Batch/src/main/webapp" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web95">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Core/Spring-Framework-In-Easy-Steps/Chapter-03-Spring-Core-Concepts/target/Chapter-03-Spring-Core-Concepts/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Core/Spring-Framework-In-Easy-Steps/Chapter-03-Spring-Core-Concepts/target/Chapter-03-Spring-Core-Concepts" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web7">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Core/Spring-Framework-In-Easy-Steps/Chapter-04-Setter-Injection/src/main/webapp/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Core/Spring-Framework-In-Easy-Steps/Chapter-04-Setter-Injection/src/main/webapp" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web10">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Core/Spring-Framework-In-Easy-Steps/Chapter-18-Sending-data-from-UI-to-Controller/src/main/webapp/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Core/Spring-Framework-In-Easy-Steps/Chapter-18-Sending-data-from-UI-to-Controller/src/main/webapp" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web98">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Learn-Spring-boot-in-simple-steps/Division-12-Thymeleaf/src/main/webapp/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Learn-Spring-boot-in-simple-steps/Division-12-Thymeleaf/src/main/webapp" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web6">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Learn-Spring-boot-in-simple-steps/Division-06-Create-REST-CRUD-API/target/Division-05-Spring-Data-JPA/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Learn-Spring-boot-in-simple-steps/Division-06-Create-REST-CRUD-API/target/Division-05-Spring-Data-JPA" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web97">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Cloud-Tutorials/Spring-Cloud-Fundamentals/Section-03-Spring-Cloud-Eureka-Server/src/main/webapp/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Cloud-Tutorials/Spring-Cloud-Fundamentals/Section-03-Spring-Cloud-Eureka-Server/src/main/webapp" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web9">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Core/Spring-Framework-In-Easy-Steps/Chapter-11-Stereotype-Annotations/target/Chapter-11-Stereotype-Annotations/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Core/Spring-Framework-In-Easy-Steps/Chapter-11-Stereotype-Annotations/target/Chapter-11-Stereotype-Annotations" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web12">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Core/Spring-Framework-In-Easy-Steps/Chapter-07-Constructor-Injection/target/Chapter-07-Constructor-Injection/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Core/Spring-Framework-In-Easy-Steps/Chapter-07-Constructor-Injection/target/Chapter-07-Constructor-Injection" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web8">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Learn-Spring-boot-in-simple-steps/Division-03-Basics/target/Division-03-Basics/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Learn-Spring-boot-in-simple-steps/Division-03-Basics/target/Division-03-Basics" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web11">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Core/Spring-Framework-In-Easy-Steps/Chapter-06-Dependency-Check-Inner-beans-and-Scopes/target/Chapter-06-Dependency-Check-Inner-beans-and-Scopes/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Core/Spring-Framework-In-Easy-Steps/Chapter-06-Dependency-Check-Inner-beans-and-Scopes/target/Chapter-06-Dependency-Check-Inner-beans-and-Scopes" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web99">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Core/Spring-Framework-In-Easy-Steps/Chapter-20-Spring-MVC-and-ORM/src/main/webapp/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Core/Spring-Framework-In-Easy-Steps/Chapter-20-Spring-MVC-and-ORM/src/main/webapp" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web14">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Core/Spring-Framework-In-Easy-Steps/Chapter-05-Life-Cycle-Methods/src/main/webapp/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Core/Spring-Framework-In-Easy-Steps/Chapter-05-Life-Cycle-Methods/src/main/webapp" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web13">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Core/Spring-Framework-In-Easy-Steps/Chapter-13-Injecting-Interfaces/target/Chapter-13-Injecting-Interfaces/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Core/Spring-Framework-In-Easy-Steps/Chapter-13-Injecting-Interfaces/target/Chapter-13-Injecting-Interfaces" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web90">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Core/Spring-Framework-In-Easy-Steps/Chapter-04-Setter-Injection/target/Chapter-04-Setter-Injection/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Core/Spring-Framework-In-Easy-Steps/Chapter-04-Setter-Injection/target/Chapter-04-Setter-Injection" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web92">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Cloud-Tutorials/Spring-Cloud-Fundamentals/Section-02-Spring-Cloud-Product-Services/src/main/webapp/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Cloud-Tutorials/Spring-Cloud-Fundamentals/Section-02-Spring-Cloud-Product-Services/src/main/webapp" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web91">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Spring-boot-tutorial-for-beginners/Section-05-Spring-Boot-Deep-Dive-with-a-simple-API/target/Section-05-Spring-Boot-Deep-Dive-with-a-simple-API/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Spring-boot-tutorial-for-beginners/Section-05-Spring-Boot-Deep-Dive-with-a-simple-API/target/Section-05-Spring-Boot-Deep-Dive-with-a-simple-API" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web94">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Core/Spring-Framework-In-Easy-Steps/Chapter-01-Introduction-To-Spring-Core/target/Chapter-01-Introduction-To-Spring-Core/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Core/Spring-Framework-In-Easy-Steps/Chapter-01-Introduction-To-Spring-Core/target/Chapter-01-Introduction-To-Spring-Core" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web93">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Core/Spring-Framework-In-Easy-Steps/Chapter-22-Spring-AOP/src/main/webapp/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Core/Spring-Framework-In-Easy-Steps/Chapter-22-Spring-AOP/src/main/webapp" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web85">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Spring-boot-tutorial-for-beginners/Section-03-Introduction-to-JUnit-in-5-Steps/target/Section-02-Web-Application-with-Spring-Boot/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Spring-boot-tutorial-for-beginners/Section-03-Introduction-to-JUnit-in-5-Steps/target/Section-02-Web-Application-with-Spring-Boot" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web84">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Cloud-Tutorials/Spring-Cloud-Fundamentals/Section-04-Spring-Cloud-Zuul-Proxy-Server/src/main/webapp/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Cloud-Tutorials/Spring-Cloud-Fundamentals/Section-04-Spring-Cloud-Zuul-Proxy-Server/src/main/webapp" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web87">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Core/Spring-Framework-In-Easy-Steps/Chapter-05-Life-Cycle-Methods/target/Chapter-05-Life-Cycle-Methods/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Core/Spring-Framework-In-Easy-Steps/Chapter-05-Life-Cycle-Methods/target/Chapter-05-Life-Cycle-Methods" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web86">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Core/Spring-Framework-In-Easy-Steps/Chapter-12-Spring-Expression-Language/src/main/webapp/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Core/Spring-Framework-In-Easy-Steps/Chapter-12-Spring-Expression-Language/src/main/webapp" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web89">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Core/Spring-Framework-In-Easy-Steps/Chapter-15-Spring-ORM/target/Chapter-15-Spring-ORM/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Core/Spring-Framework-In-Easy-Steps/Chapter-15-Spring-ORM/target/Chapter-15-Spring-ORM" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web88">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Core/Spring-Framework-In-Easy-Steps/Chapter-10-Standalone-Collections/target/Chapter-10-Standalone-Collections/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Core/Spring-Framework-In-Easy-Steps/Chapter-10-Standalone-Collections/target/Chapter-10-Standalone-Collections" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web81">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Spring-boot-tutorial-for-beginners/Section-07-Connecting-Web-Application-with-JPA/src/main/webapp/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Spring-boot-tutorial-for-beginners/Section-07-Connecting-Web-Application-with-JPA/src/main/webapp" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web80">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Learn-Spring-boot-in-simple-steps/Division-04-First-Project/src/main/webapp/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Learn-Spring-boot-in-simple-steps/Division-04-First-Project/src/main/webapp" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web83">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Learn-Spring-boot-in-simple-steps/Division-16-Messaging-and-Spring-JMS/src/main/webapp/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Learn-Spring-boot-in-simple-steps/Division-16-Messaging-and-Spring-JMS/src/main/webapp" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web82">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Core/Spring-Framework-In-Easy-Steps/Chapter-16-Spring-MVC/target/Chapter-16-Spring-MVC/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Core/Spring-Framework-In-Easy-Steps/Chapter-16-Spring-MVC/target/Chapter-16-Spring-MVC" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web74">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Learn-Spring-boot-in-simple-steps/Division-04-First-Project/target/Division-04-First-Project/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Learn-Spring-boot-in-simple-steps/Division-04-First-Project/target/Division-04-First-Project" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web73">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Master-Java-Web-Services-and-RESTful-API-with-Spring-Boot/Section-07-Introduction-to-JPA-in-10-Steps/target/Section-07-Introduction-to-JPA-in-10-Steps/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Master-Java-Web-Services-and-RESTful-API-with-Spring-Boot/Section-07-Introduction-to-JPA-in-10-Steps/target/Section-07-Introduction-to-JPA-in-10-Steps" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web76">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Core/Spring-Framework-In-Easy-Steps/Chapter-01-Introduction-To-Spring-Core/src/main/webapp/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Core/Spring-Framework-In-Easy-Steps/Chapter-01-Introduction-To-Spring-Core/src/main/webapp" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web75">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Master-Java-Web-Services-and-RESTful-API-with-Spring-Boot/Section-03-Introduction-to-Spring-Framework-in-10-Steps/target/Section-03-Introduction-to-Spring-Framework-in-10-Steps/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Master-Java-Web-Services-and-RESTful-API-with-Spring-Boot/Section-03-Introduction-to-Spring-Framework-in-10-Steps/target/Section-03-Introduction-to-Spring-Framework-in-10-Steps" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web78">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Core/Spring-Framework-In-Easy-Steps/Chapter-18-Sending-data-from-UI-to-Controller/target/Chapter-18-Sending-data-from-UI-to-Controller/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Core/Spring-Framework-In-Easy-Steps/Chapter-18-Sending-data-from-UI-to-Controller/target/Chapter-18-Sending-data-from-UI-to-Controller" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web77">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Learn-Spring-boot-in-simple-steps/Division-03-Basics/src/main/webapp/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Learn-Spring-boot-in-simple-steps/Division-03-Basics/src/main/webapp" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web79">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Core/Spring-Framework-In-Easy-Steps/Chapter-12-Spring-Expression-Language/target/Chapter-12-Spring-Expression-Language/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Core/Spring-Framework-In-Easy-Steps/Chapter-12-Spring-Expression-Language/target/Chapter-12-Spring-Expression-Language" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web70">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Learn-Spring-boot-in-simple-steps/Division-09-Logging/src/main/webapp/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Learn-Spring-boot-in-simple-steps/Division-09-Logging/src/main/webapp" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web72">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Learn-Spring-boot-in-simple-steps/Division-02-Software-Setup/src/main/webapp/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Learn-Spring-boot-in-simple-steps/Division-02-Software-Setup/src/main/webapp" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web71">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Learn-Spring-boot-in-simple-steps/Division-07-Creating-a-REST-Client/target/Division-05-Spring-Data-JPA/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/Spring-Tutorials/Spring-Boot-Tutorials/Learn-Spring-boot-in-simple-steps/Division-07-Creating-a-REST-Client/target/Division-05-Spring-Data-JPA" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+  </component>
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$" />
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
