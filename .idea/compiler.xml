@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Annotation profile for Spring-Tutorials" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.20/lombok-1.18.20.jar" />
+        </processorPath>
+        <module name="Division-05-Spring-Data-JPA" />
+        <module name="Section-03-Introduction-to-Spring-Framework-in-10-Steps" />
+        <module name="Section-03-Introduction-to-JUnit-in-5-Steps" />
+        <module name="Chapter-19-Using-ModelMap-and-String-View" />
+        <module name="Division-07-Creating-a-REST-Client" />
+        <module name="Chapter-22-Spring-AOP" />
+        <module name="Chapter-23-Java-Configuration" />
+        <module name="Chapter-11-Stereotype-Annotations" />
+        <module name="Chapter-13-Injecting-Interfaces" />
+        <module name="Chapter-15-Spring-ORM" />
+        <module name="Chapter-14-Spring-JDBC" />
+        <module name="Division-04-First-Project" />
+        <module name="Section-04-Introduction-to-Mockito-in-5-Steps" />
+        <module name="Section-01-Spring-Cloud-Coupon-Services" />
+        <module name="Division-01-Introduction" />
+        <module name="Section-01-Introduction-of-Spring-boot" />
+        <module name="Division-06-Create-REST-CRUD-API" />
+        <module name="Division-16-Messaging-and-Spring-JMS" />
+        <module name="Chapter-01-Introduction-To-Spring-Core" />
+        <module name="Chapter-12-Spring-Expression-Language" />
+        <module name="Chapter-17-Sending-data-from-Controller-to-UI" />
+        <module name="Chapter-20-Spring-MVC-and-ORM" />
+        <module name="Chapter-02-Software-Setup" />
+        <module name="Section-05-Spring-Cloud-API-Gateway-Server" />
+        <module name="Chapter-09-Auto-Wiring" />
+        <module name="Section-02-Introduction-To-Web-Services" />
+        <module name="Chapter-16-Spring-MVC" />
+        <module name="Chapter-07-Constructor-Injection" />
+        <module name="Chapter-18-Sending-data-from-UI-to-Controller" />
+        <module name="Chapter-08-Using-Properties" />
+        <module name="Division-02-Software-Setup" />
+        <module name="Section-06-Spring-Cloud-Config-server" />
+        <module name="Chapter-05-Life-Cycle-Methods" />
+        <module name="Chapter-06-Dependency-Check-Inner-beans-and-Scopes" />
+        <module name="Chapter-04-Setter-Injection" />
+        <module name="Division-09-Logging" />
+        <module name="Chapter-21-Spring-MVC-and-AJAX-Using-JQuery" />
+        <module name="Division-15-Unit-Testing-using-MockMvc" />
+        <module name="Division-08-Profiles" />
+        <module name="Section-04-Introduction-to-Spring-Boot-in-10-Steps" />
+        <module name="Section-02-Web-Application-with-Spring-Boot" />
+        <module name="Chapter-24-Java-Configuration-For-Web-Applications" />
+        <module name="Section-02-Spring-Cloud-Product-Services" />
+        <module name="Division-03-Basics" />
+        <module name="Chapter-03-Spring-Core-Concepts" />
+        <module name="Chapter-10-Standalone-Collections" />
+      </profile>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="Section-07-Connecting-Web-Application-with-JPA" />
+        <module name="Section-04-Spring-Cloud-Zuul-Proxy-Server" />
+        <module name="Division-13-Database-caching" />
+        <module name="Division-11-Spring-Security" />
+        <module name="Division-10-Health-Check-and-Metrics" />
+        <module name="Section-03-Spring-Cloud-Eureka-Server" />
+        <module name="Section-06-Introduction-to-JPA-With-Spring-Boot-in-10-Steps" />
+        <module name="Section-07-Introduction-to-JPA-in-10-Steps" />
+        <module name="Section-05-Spring-Boot-Deep-Dive-with-a-simple-API" />
+        <module name="Division-14-Spring-Batch-DB-Operation" />
+        <module name="Division-14-Spring-Batch" />
+        <module name="Section-06-RESTful-Web-Services-with-Spring-and-Spring-Boot" />
+        <module name="Division-12-Thymeleaf" />
+        <module name="Section-08-Connecting-RESTful-Web-Service-to-JPA" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Division-01-Introduction" options="-parameters" />
+      <module name="Division-02-Software-Setup" options="-parameters" />
+      <module name="Division-03-Basics" options="-parameters" />
+      <module name="Division-04-First-Project" options="-parameters" />
+      <module name="Division-05-Spring-Data-JPA" options="-parameters" />
+      <module name="Division-06-Create-REST-CRUD-API" options="-parameters" />
+      <module name="Division-07-Creating-a-REST-Client" options="-parameters" />
+      <module name="Division-08-Profiles" options="-parameters" />
+      <module name="Division-09-Logging" options="-parameters" />
+      <module name="Division-10-Health-Check-and-Metrics" options="-parameters" />
+      <module name="Division-11-Spring-Security" options="-parameters" />
+      <module name="Division-12-Thymeleaf" options="-parameters" />
+      <module name="Division-13-Database-caching" options="-parameters" />
+      <module name="Division-14-Spring-Batch" options="-parameters" />
+      <module name="Division-14-Spring-Batch-DB-Operation" options="-parameters" />
+      <module name="Division-15-Unit-Testing-using-MockMvc" options="-parameters" />
+      <module name="Division-16-Messaging-and-Spring-JMS" options="-parameters" />
+      <module name="Section-01-Introduction-of-Spring-boot" options="-parameters" />
+      <module name="Section-01-Spring-Cloud-Coupon-Services" options="-parameters" />
+      <module name="Section-02-Introduction-To-Web-Services" options="-parameters" />
+      <module name="Section-02-Spring-Cloud-Product-Services" options="-parameters" />
+      <module name="Section-02-Web-Application-with-Spring-Boot" options="-parameters" />
+      <module name="Section-03-Introduction-to-JUnit-in-5-Steps" options="-parameters" />
+      <module name="Section-03-Introduction-to-Spring-Framework-in-10-Steps" options="-parameters" />
+      <module name="Section-03-Spring-Cloud-Eureka-Server" options="-parameters" />
+      <module name="Section-04-Introduction-to-Mockito-in-5-Steps" options="-parameters" />
+      <module name="Section-04-Introduction-to-Spring-Boot-in-10-Steps" options="-parameters" />
+      <module name="Section-04-Spring-Cloud-Zuul-Proxy-Server" options="-parameters" />
+      <module name="Section-05-Spring-Boot-Deep-Dive-with-a-simple-API" options="-parameters" />
+      <module name="Section-05-Spring-Cloud-API-Gateway-Server" options="-parameters" />
+      <module name="Section-06-Introduction-to-JPA-With-Spring-Boot-in-10-Steps" options="-parameters" />
+      <module name="Section-06-RESTful-Web-Services-with-Spring-and-Spring-Boot" options="-parameters" />
+      <module name="Section-06-Spring-Cloud-Config-server" options="-parameters" />
+      <module name="Section-07-Connecting-Web-Application-with-JPA" options="-parameters" />
+      <module name="Section-07-Introduction-to-JPA-in-10-Steps" options="-parameters" />
+      <module name="Section-08-Connecting-RESTful-Web-Service-to-JPA" options="-parameters" />
+    </option>
+  </component>
+</project>
