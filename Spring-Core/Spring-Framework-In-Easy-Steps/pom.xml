@@ -12,14 +12,12 @@
 	<name>Spring-Framework-In-Easy-Steps</name>
 	<description>Spring-Framework-In-Easy-Steps</description>
 	<modules>
-		<module>Chapter-03-Spring-Core-Concepts</module>
 		<module>Chapter-01-Introduction-To-Spring-Core</module>
 		<module>Chapter-02-Software-Setup</module>
+		<module>Chapter-03-Spring-Core-Concepts</module>
 		<module>Chapter-04-Setter-Injection</module>
 		<module>Chapter-05-Life-Cycle-Methods</module>
-		<module>
-			Chapter-06-Dependency-Check-Inner-beans-and-Scopes
-		</module>
+		<module>Chapter-06-Dependency-Check-Inner-beans-and-Scopes</module>
 		<module>Chapter-07-Constructor-Injection</module>
 		<module>Chapter-08-Using-Properties</module>
 		<module>Chapter-09-Auto-Wiring</module>
@@ -37,8 +35,6 @@
 		<module>Chapter-21-Spring-MVC-and-AJAX-Using-JQuery</module>
 		<module>Chapter-22-Spring-AOP</module>
 		<module>Chapter-23-Java-Configuration</module>
-		<module>
-			Chapter-24-Java-Configuration-For-Web-Applications
-		</module>
+		<module>Chapter-24-Java-Configuration-For-Web-Applications</module>
 	</modules>
 </project>

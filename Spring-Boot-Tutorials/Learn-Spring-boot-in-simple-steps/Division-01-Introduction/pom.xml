@@ -2,18 +2,18 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <!--<parent>
+    <parent>
         <groupId>com.tutorials.sid.spring</groupId>
         <artifactId>Learn-Spring-boot-in-simple-steps</artifactId>
         <version>0.0.1-SNAPSHOT</version>
-    </parent>-->
+    </parent>
 
-    <parent>
+    <!--<parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.4.2</version>
         <relativePath/>
-    </parent>
+    </parent>-->
     <artifactId>Division-01-Introduction</artifactId>
     <packaging>war</packaging>
     <name>Division-01-Introduction</name>
@@ -22,11 +22,25 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <Project.name>Division-01-Introduction</Project.name>
+        <spring.boot.version>3.5.14</spring.boot.version>
         <start-class>com.tutorials.sid.spring.Division01Introduction</start-class>
-        <java.version>11</java.version>
+        <!--<java.version>11</java.version>
         <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
+        <maven.compiler.target>11</maven.compiler.target>-->
     </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- Import Spring Boot BOM to control versions for Spring artifacts -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring.boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <dependencies>
         <dependency>
@@ -70,15 +84,15 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.0</version>
+                <version>3.11.0</version>
                 <configuration>
-                    <source>${java.version}</source>
-                    <target>${java.version}</target>
+                    <!-- Use <release> for reliable cross-version compilation (Java 9+) -->
+                    <release>${java.version}</release>
                     <annotationProcessorPaths>
                         <path>
                             <groupId>org.projectlombok</groupId>
                             <artifactId>lombok</artifactId>
-                            <version>1.18.20</version>
+                            <version>1.18.34</version>
                         </path>
                     </annotationProcessorPaths>
                 </configuration>

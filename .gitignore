@@ -16,6 +16,7 @@ buildNumber.properties
 
 # Log files
 *.log
+build_output.txt
 
 # Package files
 *.jar
