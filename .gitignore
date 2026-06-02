@@ -1,0 +1,51 @@
+# Git ignore for a Java / Maven project
+
+# Maven
+target/
+dependency-reduced-pom.xml
+release.properties
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+buildNumber.properties
+.mvn/timing.properties
+
+# Compiled class files
+*.class
+
+# Log files
+*.log
+
+# Package files
+*.jar
+*.war
+*.ear
+
+# IDEs
+
+# Eclipse
+.project
+.classpath
+.settings/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+
+# VS Code
+.vscode/
+
+# Build directories
+bin/
+out/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Others
+node_modules/
+*.swp
+
