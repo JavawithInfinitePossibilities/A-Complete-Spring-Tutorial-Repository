@@ -16,8 +16,6 @@
 	<modules>
 		<module>Learn-Spring-boot-in-simple-steps</module>
 		<module>Spring-boot-tutorial-for-beginners</module>
-		<module>
-  		Master-Java-Web-Services-and-RESTful-API-with-Spring-Boot
-  	</module>
+		<module>Master-Java-Web-Services-and-RESTful-API-with-Spring-Boot</module>
 	</modules>
 </project>
