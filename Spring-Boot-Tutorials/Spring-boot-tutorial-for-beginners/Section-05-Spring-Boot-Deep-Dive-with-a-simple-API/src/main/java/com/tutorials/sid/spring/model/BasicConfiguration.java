@@ -34,3 +34,4 @@ public class BasicConfiguration {
 		this.number = number;
 	}
 }
+

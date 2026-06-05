@@ -71,3 +71,4 @@ public class Coupon implements Serializable {
 	}
 
 }
+

@@ -30,3 +30,4 @@ class Division14SpringBatchTest {
 	}
 
 }
+

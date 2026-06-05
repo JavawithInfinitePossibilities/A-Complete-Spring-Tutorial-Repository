@@ -76,3 +76,4 @@ class Division09LoggingTest {
 	}
 
 }
+

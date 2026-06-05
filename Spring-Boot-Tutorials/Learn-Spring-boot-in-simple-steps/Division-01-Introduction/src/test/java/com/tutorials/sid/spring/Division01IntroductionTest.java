@@ -14,3 +14,4 @@ class Division01IntroductionTest {
 	}
 
 }
+

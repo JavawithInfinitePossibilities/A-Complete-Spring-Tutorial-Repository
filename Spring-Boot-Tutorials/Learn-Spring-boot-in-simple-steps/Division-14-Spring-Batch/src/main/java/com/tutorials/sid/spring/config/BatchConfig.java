@@ -1,12 +1,15 @@
 /**
- * 
+ *
  */
 package com.tutorials.sid.spring.config;
 
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
-import org.springframework.batch.core.configuration.annotation.JobBuilderFactory;
-import org.springframework.batch.core.configuration.annotation.StepBuilderFactory;
+import org.springframework.batch.core.job.builder.JobBuilder;
+import org.springframework.batch.core.step.builder.StepBuilder;
+import org.springframework.batch.core.repository.JobRepository;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.batch.core.launch.support.RunIdIncrementer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -24,43 +27,51 @@ import com.tutorials.sid.spring.writer.ItemWriterCustom;
 @Configuration
 public class BatchConfig {
 
-	@Autowired
-	private StepBuilderFactory stepBuilderFactory;
+    @Bean
+    public ItemReaderCustom itemReaderCustom() {
+        return new ItemReaderCustom();
+    }
 
-	@Autowired
-	private JobBuilderFactory jobBuilderFactory;
+    @Bean
+    public ItemProcesserCustom itemProcesserCustom() {
+        return new ItemProcesserCustom();
+    }
 
-	@Bean
-	public ItemReaderCustom itemReaderCustom() {
-		return new ItemReaderCustom();
-	}
+    @Bean
+    public ItemWriterCustom itemwriterCustom() {
+        return new ItemWriterCustom();
+    }
 
-	@Bean
-	public ItemProcesserCustom itemProcesserCustom() {
-		return new ItemProcesserCustom();
-	}
+    @Bean
+    public MyJobListener myJobListener() {
+        return new MyJobListener();
+    }
 
-	@Bean
-	public ItemWriterCustom itemwriterCustom() {
-		return new ItemWriterCustom();
-	}
+    @Autowired
+    private JobRepository jobRepository;
 
-	@Bean
-	public MyJobListener myJobListener() {
-		return new MyJobListener();
-	}
+    @Autowired
+    @Qualifier("platformTransectionManager")
+    private PlatformTransactionManager platformTransactionManager;
 
-	@Bean
-	public Step step() {
-		return stepBuilderFactory.get("Step1").<String, String>chunk(2).reader(itemReaderCustom())
-				.processor(itemProcesserCustom()).writer(itemwriterCustom()).build();
-	}
+    @Bean
+    public Step step() {
+        return new StepBuilder("Step1", jobRepository)
+                .<String, String>chunk(2, platformTransactionManager)
+                .reader(itemReaderCustom())
+                .processor(itemProcesserCustom())
+                .writer(itemwriterCustom())
+                .build();
+    }
 
-	@Bean
-	public Job job() {
-		return jobBuilderFactory.get("job1").incrementer(new RunIdIncrementer()).listener(myJobListener()).start(step())
-				.build();
+    @Bean
+    public Job job() {
+        return new JobBuilder("job1", jobRepository)
+                .incrementer(new RunIdIncrementer())
+                .listener(myJobListener()).start(step())
+                .build();
 
-	}
+    }
 
 }
+

@@ -23,3 +23,4 @@ public interface IProductRepository extends JpaRepository<Product, Integer> {
 	public List<Product> findByNameLikeAndPrice(@Param("name") String name, @Param("price") double price);
 
 }
+

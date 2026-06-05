@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package com.tutorials.sid.spring.config;
 
@@ -9,9 +9,10 @@ import javax.sql.DataSource;
 
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
-import org.springframework.batch.core.configuration.annotation.JobBuilderFactory;
-import org.springframework.batch.core.configuration.annotation.StepBuilderFactory;
+import org.springframework.batch.core.job.builder.JobBuilder;
 import org.springframework.batch.core.launch.support.RunIdIncrementer;
+import org.springframework.batch.core.repository.JobRepository;
+import org.springframework.batch.core.step.builder.StepBuilder;
 import org.springframework.batch.item.ItemProcessor;
 import org.springframework.batch.item.ItemReader;
 import org.springframework.batch.item.ItemWriter;
@@ -22,11 +23,13 @@ import org.springframework.batch.item.file.mapping.BeanWrapperFieldSetMapper;
 import org.springframework.batch.item.file.mapping.DefaultLineMapper;
 import org.springframework.batch.item.file.transform.DelimitedLineTokenizer;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.PathResource;
 
 import com.tutorials.sid.spring.model.Product;
+import org.springframework.transaction.PlatformTransactionManager;
 
 /**
  * @author Lenovo
@@ -35,56 +38,57 @@ import com.tutorials.sid.spring.model.Product;
 @Configuration
 public class BatchConfig {
 
-	private static Random incrValue = new Random();
+    private static Random incrValue = new Random();
 
-	@Autowired
-	DataSource datasource;
+    @Autowired
+    DataSource datasource;
 
-	@Autowired
-	private StepBuilderFactory stepBuilderFactory;
+    @Autowired
+    private JobRepository jobRepository;
 
-	@Autowired
-	private JobBuilderFactory jobBuilderFactory;
+    @Autowired
+    @Qualifier("platformTransectionManager")
+    private PlatformTransactionManager platformTransactionManager;
 
-	@Bean
-	public ItemReader<Product> reader() {
-		System.out.println("This is Reader:");
-		FlatFileItemReader<Product> flatFileItemReader = new FlatFileItemReader<>();
-		PathResource resource = new PathResource("./src/main/resources/product.csv");
-		System.out.println("Path name: " + resource.getPath());
-		flatFileItemReader.setResource(resource);
+    @Bean
+    public ItemReader<Product> reader() {
+        System.out.println("This is Reader:");
+        FlatFileItemReader<Product> flatFileItemReader = new FlatFileItemReader<>();
+        PathResource resource = new PathResource("./src/main/resources/product.csv");
+        System.out.println("Path name: " + resource.getPath());
+        flatFileItemReader.setResource(resource);
 
-		DefaultLineMapper<Product> lineMapper = new DefaultLineMapper<Product>();
-		DelimitedLineTokenizer lineTokenizer = new DelimitedLineTokenizer();
-		lineTokenizer.setNames("id", "name", "description", "price");
-		BeanWrapperFieldSetMapper<Product> fieldSetMapper = new BeanWrapperFieldSetMapper<Product>();
-		fieldSetMapper.setTargetType(Product.class);
+        DefaultLineMapper<Product> lineMapper = new DefaultLineMapper<Product>();
+        DelimitedLineTokenizer lineTokenizer = new DelimitedLineTokenizer();
+        lineTokenizer.setNames("id", "name", "description", "price");
+        BeanWrapperFieldSetMapper<Product> fieldSetMapper = new BeanWrapperFieldSetMapper<Product>();
+        fieldSetMapper.setTargetType(Product.class);
 
-		lineMapper.setLineTokenizer(lineTokenizer);
-		lineMapper.setFieldSetMapper(fieldSetMapper);
-		flatFileItemReader.setLineMapper(lineMapper);
-		return flatFileItemReader;
-	}
+        lineMapper.setLineTokenizer(lineTokenizer);
+        lineMapper.setFieldSetMapper(fieldSetMapper);
+        flatFileItemReader.setLineMapper(lineMapper);
+        return flatFileItemReader;
+    }
 
-	@Bean
-	public ItemProcessor<Product, Product> processer() {
-		System.out.println("This is processer:");
-		return (p) -> {
-			p.setPrice(p.getPrice() - (p.getPrice() * 0.1));
-			return p;
-		};
-	}
+    @Bean
+    public ItemProcessor<Product, Product> processer() {
+        System.out.println("This is processer:");
+        return (p) -> {
+            p.setPrice(p.getPrice() - (p.getPrice() * 0.1));
+            return p;
+        };
+    }
 
-	@Bean
-	public ItemWriter<Product> writer() {
-		System.out.println("This is Writer:");
-		JdbcBatchItemWriter<Product> writer = new JdbcBatchItemWriter<Product>();
-		writer.setDataSource(datasource);
-		writer.setItemSqlParameterSourceProvider(new BeanPropertyItemSqlParameterSourceProvider<Product>());
-		writer.setSql(
-				"INSERT INTO product (id,product_name, product_description, product_price) VALUES (:id,:name,:description,:price)");
-		return writer;
-	}
+    @Bean
+    public ItemWriter<Product> writer() {
+        System.out.println("This is Writer:");
+        JdbcBatchItemWriter<Product> writer = new JdbcBatchItemWriter<Product>();
+        writer.setDataSource(datasource);
+        writer.setItemSqlParameterSourceProvider(new BeanPropertyItemSqlParameterSourceProvider<Product>());
+        writer.setSql(
+                "INSERT INTO product (id,product_name, product_description, product_price) VALUES (:id,:name,:description,:price)");
+        return writer;
+    }
 
 	/*@Bean
 	public DataSource datasource() {
@@ -96,15 +100,22 @@ public class BatchConfig {
 		return dataSource;
 	}*/
 
-	@Bean
-	public Step step() {
-		return stepBuilderFactory.get("Step1").<Product, Product>chunk(1).reader(reader()).processor(processer())
-				.writer(writer()).build();
-	}
+    @Bean
+    public Step step() {
+        return new StepBuilder("Step1", jobRepository)
+                .<Product, Product>chunk(1, platformTransactionManager)
+                .reader(reader())
+                .processor(processer())
+                .writer(writer())
+                .build();
+    }
 
-	@Bean
-	public Job job() {
-		return jobBuilderFactory.get("job" + incrValue.nextInt(100)).incrementer(new RunIdIncrementer()).start(step())
-				.build();
-	}
+    @Bean
+    public Job job() {
+        return new JobBuilder("job" + incrValue.nextInt(100), jobRepository)
+                .incrementer(new RunIdIncrementer())
+                .start(step())
+                .build();
+    }
 }
+

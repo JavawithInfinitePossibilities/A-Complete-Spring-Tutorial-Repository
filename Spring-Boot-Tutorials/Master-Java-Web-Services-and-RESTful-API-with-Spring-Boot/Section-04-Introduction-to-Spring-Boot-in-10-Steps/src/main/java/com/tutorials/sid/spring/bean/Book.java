@@ -42,3 +42,4 @@ public class Book {
 		return String.format("Book [id=%s, name=%s, author=%s]", id, name, author);
 	}
 }
+

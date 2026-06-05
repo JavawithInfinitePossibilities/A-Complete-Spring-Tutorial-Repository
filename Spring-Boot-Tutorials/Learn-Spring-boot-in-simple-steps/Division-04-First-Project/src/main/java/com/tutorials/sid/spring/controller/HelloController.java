@@ -19,3 +19,4 @@ public class HelloController {
 		return "This is first spring boot application. Hello spring boot.";
 	}
 }
+

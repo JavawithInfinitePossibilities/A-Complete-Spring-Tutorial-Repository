@@ -52,3 +52,4 @@ class Section03IntroductiontoJUnitin5StepsTest {
 		System.out.println("After all every test case. This is a static method which is related to class level.");
 	}
 }
+

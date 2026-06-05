@@ -21,3 +21,4 @@ public class Division05SpringDataJPA {
 	}
 
 }
+

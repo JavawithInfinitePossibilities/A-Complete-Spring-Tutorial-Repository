@@ -21,3 +21,4 @@ public class Section07ConnectingWebApplicationwithJPA {
 	}
 
 }
+

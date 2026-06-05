@@ -44,3 +44,4 @@ public class UserCommandLineRunner implements CommandLineRunner {
 	}
 
 }
+

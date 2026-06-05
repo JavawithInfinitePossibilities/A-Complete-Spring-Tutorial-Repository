@@ -5,6 +5,7 @@ package com.tutorials.sid.spring.writer;
 
 import java.util.List;
 
+import org.springframework.batch.item.Chunk;
 import org.springframework.batch.item.ItemWriter;
 
 /**
@@ -14,9 +15,10 @@ import org.springframework.batch.item.ItemWriter;
 public class ItemWriterCustom implements ItemWriter<String> {
 
 	@Override
-	public void write(List<? extends String> items) throws Exception {
+	public void write(Chunk<? extends String> items) throws Exception {
 		System.out.println("Inside writer");
-		System.out.println("Write : " + items);
+		System.out.println("Write : " + items.getItems());
 	}
 
 }
+

@@ -25,3 +25,4 @@ public class JmsMessageSender {
 		jmsTemplate.convertAndSend(queueName, senderMessage);
 	}
 }
+

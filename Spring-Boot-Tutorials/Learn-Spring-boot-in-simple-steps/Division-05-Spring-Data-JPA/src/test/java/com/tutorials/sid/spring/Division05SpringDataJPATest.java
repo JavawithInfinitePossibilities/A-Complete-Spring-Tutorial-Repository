@@ -50,3 +50,4 @@ class Division05SpringDataJPATest {
 
 	}
 }
+

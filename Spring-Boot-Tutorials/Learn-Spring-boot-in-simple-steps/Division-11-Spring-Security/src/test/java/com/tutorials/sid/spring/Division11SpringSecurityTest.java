@@ -13,3 +13,4 @@ class Division11SpringSecurityTest {
 	}
 
 }
+

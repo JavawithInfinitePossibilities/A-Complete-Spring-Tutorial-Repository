@@ -45,3 +45,4 @@ class Division04FirstProjectTest {
 	}
 
 }
+

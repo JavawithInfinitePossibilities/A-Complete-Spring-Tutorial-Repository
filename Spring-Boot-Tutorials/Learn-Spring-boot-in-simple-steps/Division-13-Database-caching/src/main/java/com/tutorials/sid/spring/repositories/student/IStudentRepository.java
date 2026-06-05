@@ -15,3 +15,4 @@ public interface IStudentRepository extends JpaRepository<StudentDB, Long> {
 	@Query("Select s from studentdb s where name like %:name% and test_score=:score")
 	public List<StudentDB> findByNameLikeAndScore(@Param("name") String name, @Param("score") int score);
 }
+

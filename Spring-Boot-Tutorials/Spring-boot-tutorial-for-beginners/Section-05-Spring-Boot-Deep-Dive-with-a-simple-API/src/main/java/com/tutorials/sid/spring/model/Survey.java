@@ -23,3 +23,4 @@ public class Survey {
 	private List<Question> questions;
 
 }
+

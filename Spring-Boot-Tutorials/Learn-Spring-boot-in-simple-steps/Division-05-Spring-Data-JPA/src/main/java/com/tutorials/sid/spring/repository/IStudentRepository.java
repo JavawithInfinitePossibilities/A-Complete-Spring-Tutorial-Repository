@@ -14,3 +14,4 @@ import com.tutorials.sid.spring.entities.StudentDB;
 public interface IStudentRepository extends JpaRepository<StudentDB, Long> {
 
 }
+

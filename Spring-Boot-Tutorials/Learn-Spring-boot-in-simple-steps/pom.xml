@@ -12,6 +12,9 @@
 	<packaging>pom</packaging>
 	<name>Learn-Spring-boot-in-simple-steps</name>
 	<description>Learn-Spring-boot-in-simple-steps</description>
+	<properties>
+		<spring.boot.version>3.5.14</spring.boot.version>
+	</properties>
 
 	<modules>
 		<module>Division-01-Introduction</module>

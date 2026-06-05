@@ -43,3 +43,4 @@ class Division06CreateRESTCRUDAPITest {
 	}
 
 }
+

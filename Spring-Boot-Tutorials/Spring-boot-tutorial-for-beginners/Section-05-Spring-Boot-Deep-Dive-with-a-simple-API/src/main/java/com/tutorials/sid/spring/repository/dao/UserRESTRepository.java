@@ -20,3 +20,4 @@ public interface UserRESTRepository extends PagingAndSortingRepository<User, Lon
 
 	public List<User> findByRole(@Param("role") String role);
 }
+
