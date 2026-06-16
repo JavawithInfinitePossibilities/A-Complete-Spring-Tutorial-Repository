@@ -1,65 +1,81 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.tutorials.sid.spring</groupId>
-	<artifactId>Spring-Tutorials</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<packaging>pom</packaging>
-	<name>Spring-Tutorials</name>
-	<description>Spring-Tutorials</description>
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.tutorials.sid.spring</groupId>
+    <artifactId>Spring-Tutorials</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>Spring-Tutorials</name>
+    <description>Spring-Tutorials</description>
 
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<java.version>17</java.version>
-	</properties>
-	<dependencies>
-		<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
-		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-			<version>1.18.34</version>
-			<scope>provided</scope>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
-		<dependency>
-			<groupId>org.apache.commons</groupId>
-			<artifactId>commons-lang3</artifactId>
-			<version>3.8.1</version>
-		</dependency>
-	</dependencies>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java.version>21</java.version>
+    </properties>
+    <dependencies>
+        <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <!-- Use the below version of Lombok if you are using java 21 or below version.
+            If you are using above 21 then use the latest version
+            1.18.38 or above version of Lombok as it has support for java 21 and above versions.
+            -->
+            <version>1.18.34</version>
+            <!--  For Lombok, use 'provided' scope to avoid including it in the final artifact, as it's only needed during compilation -->
+            <scope>provided</scope>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.8.1</version>
+        </dependency>
+    </dependencies>
 
-	<build>
-		<finalName>${Project.name}</finalName>
-		<resources>
-			<resource>
-				<directory>src/main/resources</directory>
-				<filtering>true</filtering>
-			</resource>
-		</resources>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.11.0</version>
-				<configuration>
-					<release>${java.version}</release>
-				<annotationProcessorPaths>
-					<path>
-						<groupId>org.projectlombok</groupId>
-						<artifactId>lombok</artifactId>
-						<version>1.18.34</version>
-					</path>
-				</annotationProcessorPaths>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
+    <build>
+        <finalName>${Project.name}</finalName>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.11.0</version>
+                <configuration>
+                    <!-- For Java 9 and above, use 'release' to specify the Java version for both source and target-->
+                    <release>${java.version}</release>
+                    <!-- For Java 8 and below, use 'source' and 'target' to specify the Java version for source code
+                    and compiled bytecode OR define the source and target maven property as below.
+                    1.  The below code need to be added in the properties section of pom.xml
+                            <maven.compiler.source>1.8</maven.compiler.source>
+                            <maven.compiler.target>1.8</maven.compiler.target>
+                            OR
+                    2.  The below code need to be added in the configuration section of maven-compiler-plugin
+                            <source>${java.version}</source>
+                            <target>${java.version}</target>
+                     -->
+                    <annotationProcessorPaths>
+                        <path>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+                            <version>1.18.34</version>
+                        </path>
+                    </annotationProcessorPaths>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
-	<modules>
-		<module>Spring-Core</module>
-		<module>Spring-Boot-Tutorials</module>
-		<module>Spring-Cloud-Tutorials</module>
-		<module>Spring-Hibernate-Tutorials</module>
-	</modules>
+    <modules>
+        <module>Spring-Core</module>
+        <module>Spring-Boot-Tutorials</module>
+        <module>Spring-Cloud-Tutorials</module>
+        <module>Spring-Hibernate-Tutorials</module>
+    </modules>
 </project>

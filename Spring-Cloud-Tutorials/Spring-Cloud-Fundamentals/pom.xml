@@ -11,6 +11,7 @@
 	<packaging>pom</packaging>
 	<name>Spring-Cloud-Fundamentals</name>
 	<description>Spring-Cloud-Fundamentals</description>
+
 	<modules>
 		<module>Section-01-Spring-Cloud-Coupon-Services</module>
 		<module>Section-02-Spring-Cloud-Product-Services</module>

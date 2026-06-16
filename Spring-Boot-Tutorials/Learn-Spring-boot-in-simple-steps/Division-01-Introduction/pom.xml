@@ -16,7 +16,6 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <Project.name>Division-01-Introduction</Project.name>
-        <spring.boot.version>3.5.14</spring.boot.version>
         <start-class>com.tutorials.sid.spring.Division01Introduction</start-class>
     </properties>
 

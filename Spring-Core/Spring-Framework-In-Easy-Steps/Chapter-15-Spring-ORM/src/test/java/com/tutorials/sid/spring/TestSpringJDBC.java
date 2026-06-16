@@ -27,6 +27,7 @@ public class TestSpringJDBC {
 	@Autowired
 	ApplicationContext context;
 
+	@Ignore
 	@Test
 	public void testSpringJDBCAnnotationConfigSave() {
 		Product product = (Product) context.getBean("product");

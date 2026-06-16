@@ -16,7 +16,6 @@
 		<Project.name>Chapter-17-Sending-data-from-Controller-to-UI</Project.name>
 		<jstl.version>1.2</jstl.version>
 		<taglibs.standard.version>1.1.2</taglibs.standard.version>
-		<java.version>11</java.version>
 	</properties>
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/javax.annotation/javax.annotation-api -->

@@ -6,7 +6,7 @@ package com.tutorials.sid.spring.model;
 import java.util.Date;
 
 import org.springframework.stereotype.Component;
-import javax.validation.constraints.Size;
+import jakarta.validation.constraints.Size;
 
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;

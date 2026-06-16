@@ -13,6 +13,10 @@
     <packaging>pom</packaging>
     <name>Spring-Boot-Tutorials</name>
 
+    <properties>
+        <spring.boot.version>3.5.14</spring.boot.version>
+    </properties>
+
     <modules>
         <module>Learn-Spring-boot-in-simple-steps</module>
         <module>Spring-boot-tutorial-for-beginners</module>

@@ -2,19 +2,29 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<!-- <parent> <groupId>com.tutorials.sid.spring</groupId> <artifactId>Spring-boot-tutorial-for-beginners</artifactId> 
-		<version>0.0.1-SNAPSHOT</version> </parent> -->
-
 	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.4.2</version>
-		<relativePath />
+		<groupId>com.tutorials.sid.spring</groupId>
+		<artifactId>Spring-boot-tutorial-for-beginners</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
 	</parent>
+
 	<artifactId>Section-07-Connecting-Web-Application-with-JPA</artifactId>
 	<packaging>war</packaging>
 	<name>Section-07-Connecting-Web-Application-with-JPA</name>
 	<description>Section-07-Connecting-Web-Application-with-JPA</description>
+
+	<dependencyManagement>
+		<dependencies>
+			<!-- Import Spring Boot BOM to control versions for Spring artifacts -->
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-dependencies</artifactId>
+				<version>${spring.boot.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -48,10 +58,10 @@
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
 
+		<!-- Source: https://mvnrepository.com/artifact/com.mysql/mysql-connector-j -->
 		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-			<scope>runtime</scope>
+			<groupId>com.mysql</groupId>
+			<artifactId>mysql-connector-j</artifactId>
 		</dependency>
 
 		<dependency>
@@ -69,6 +79,7 @@
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>jstl</artifactId>
+			<version>1.2</version>
 		</dependency>
 
 		<dependency>

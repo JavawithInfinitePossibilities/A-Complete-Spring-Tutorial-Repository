@@ -2,8 +2,8 @@ package com.tutorials.sid.spring.bean;
 
 import java.util.Date;
 
-import javax.validation.constraints.Past;
-import javax.validation.constraints.Size;
+import jakarta.validation.constraints.Past;
+import jakarta.validation.constraints.Size;
 
 import org.springframework.hateoas.RepresentationModel;
 import org.springframework.stereotype.Component;

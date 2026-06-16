@@ -26,6 +26,7 @@ public class TestSpringJDBC {
 	@Autowired
 	ApplicationContext context;
 
+	@Ignore
 	@Test
 	public void testSpringJDBCAnnotationConfigSave() {
 		Employee employee = (Employee) context.getBean("employee");

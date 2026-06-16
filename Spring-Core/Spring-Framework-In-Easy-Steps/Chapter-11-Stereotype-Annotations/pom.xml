@@ -14,7 +14,6 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<Project.name>Chapter-11-Stereotype-Annotations</Project.name>
-		<java.version>11</java.version>
 	</properties>
 	<build>
 		<finalName>${Project.name}</finalName>
