@@ -15,10 +15,10 @@
 
 	<modules>
 		<module>Division-01-Introduction</module>
+		<module>Division-02-Software-Setup</module>
 		<module>Division-03-Basics</module>
 		<module>Division-04-First-Project</module>
 		<module>Division-05-Spring-Data-JPA</module>
-		<module>Division-02-Software-Setup</module>
 		<module>Division-06-Create-REST-CRUD-API</module>
 		<module>Division-07-Creating-a-REST-Client</module>
 		<module>Division-08-Profiles</module>

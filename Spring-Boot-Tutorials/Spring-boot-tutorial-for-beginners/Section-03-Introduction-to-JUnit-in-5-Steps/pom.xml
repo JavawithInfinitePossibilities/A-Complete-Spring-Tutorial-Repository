@@ -13,22 +13,9 @@
 	<name>Section-03-Introduction-to-JUnit-in-5-Steps</name>
 	<description>Section-03-Introduction-to-JUnit-in-5-Steps</description>
 
-	<dependencyManagement>
-		<dependencies>
-			<!-- Import Spring Boot BOM to control versions for Spring artifacts -->
-			<dependency>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-dependencies</artifactId>
-				<version>${spring.boot.version}</version>
-				<type>pom</type>
-				<scope>import</scope>
-			</dependency>
-		</dependencies>
-	</dependencyManagement>
-
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<Project.name>Section-02-Web-Application-with-Spring-Boot</Project.name>
+		<Project.name>Section-03-Introduction-to-JUnit-in-5-Steps</Project.name>
 		<start-class>com.tutorials.sid.spring.Section03IntroductiontoJUnitin5Steps</start-class>
 		<java.version>11</java.version>
 		<maven.compiler.source>11</maven.compiler.source>

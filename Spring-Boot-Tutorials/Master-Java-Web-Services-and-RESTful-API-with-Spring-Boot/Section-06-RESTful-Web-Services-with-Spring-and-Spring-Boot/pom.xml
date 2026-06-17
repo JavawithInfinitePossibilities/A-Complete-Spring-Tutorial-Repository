@@ -13,19 +13,6 @@
 	<name>Section-06-RESTful-Web-Services-with-Spring-and-Spring-Boot</name>
 	<description>Section-06-RESTful-Web-Services-with-Spring-and-Spring-Boot</description>
 
-	<dependencyManagement>
-		<dependencies>
-			<!-- Import Spring Boot BOM to control versions for Spring artifacts -->
-			<dependency>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-dependencies</artifactId>
-				<version>${spring.boot.version}</version>
-				<type>pom</type>
-				<scope>import</scope>
-			</dependency>
-		</dependencies>
-	</dependencyManagement>
-
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<Project.name>Section-06-RESTful-Web-Services-with-Spring-and-Spring-Boot</Project.name>

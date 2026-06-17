@@ -15,21 +15,9 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <Project.name>Division-03-Basics</Project.name>
+        <Project.name>Division-02-Software-Setup</Project.name>
         <start-class>com.tutorials.sid.spring.Division02SoftwareSetup</start-class>
     </properties>
-    <dependencyManagement>
-        <dependencies>
-            <!-- Import Spring Boot BOM to control versions for Spring artifacts -->
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-dependencies</artifactId>
-                <version>${spring.boot.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
 
     <dependencies>
         <dependency>
