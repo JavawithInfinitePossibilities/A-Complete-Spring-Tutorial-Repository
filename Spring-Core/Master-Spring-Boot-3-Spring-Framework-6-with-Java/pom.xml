@@ -1,0 +1,55 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.tutorials.sid.spring</groupId>
+        <artifactId>Spring-Core</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>Master-Spring-Boot-3-Spring-Framework-6-with-Java</artifactId>
+    <packaging>pom</packaging>
+
+    <name>Master-Spring-Boot-3-Spring-Framework-6-with-Java</name>
+    <url>http://maven.apache.org</url>
+    <modules>
+        <module>Spring-MOCK-Data-App</module>
+        <module>Section-01-Getting-Started-Master-Spring-Framework-and-Spring-Boot</module>
+    </modules>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!-- Define JUnit 5 version as this will be used by all child modules-->
+        <junit-jupiter-api>5.14.3</junit-jupiter-api>
+        <!-- Define Lombok version as this will be used by all child modules-->
+        <lombok.version>1.18.40</lombok.version>
+        <!--Define Spring Framework version as this will be used by all child modules -->
+        <springframework.version>6.2.17</springframework.version>
+    </properties>
+
+    <build>
+        <plugins>
+            <!-- Maven Compiler Plugin - Updated for Java 25 support with Lombok annotation processing -->
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.13.0</version>
+                <configuration>
+                    <release>${java.version}</release>
+                    <!-- Enable annotation processing for Lombok -->
+                    <annotationProcessorPaths>
+                        <path>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+                            <version>${lombok.version}</version>
+                        </path>
+                    </annotationProcessorPaths>
+                </configuration>
+            </plugin>
+            <!-- Maven Surefire Plugin - Updated for JUnit 5 and Java 25 -->
+            <plugin>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.1.2</version>
+            </plugin>
+        </plugins>
+    </build>
+</project>
