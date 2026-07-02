@@ -15,6 +15,10 @@
     <modules>
         <module>Spring-MOCK-Data-App</module>
         <module>Section-01-Getting-Started-Master-Spring-Framework-and-Spring-Boot</module>
+        <module>Section-02-Getting-Started-with-Java-Spring-Framework</module>
+        <module>Section-03.-Using-Spring-Framework-to-Create-and-Manage-Your-Java-Objects</module>
+        <module>Section-04-Exploring-Spring-Framework-Advanced-Features</module>
+        <module>Section-05-Getting-Started-with-Spring-Boot</module>
     </modules>
 
     <properties>
@@ -25,7 +29,20 @@
         <lombok.version>1.18.40</lombok.version>
         <!--Define Spring Framework version as this will be used by all child modules -->
         <springframework.version>6.2.17</springframework.version>
+        <spring.boot.version>3.5.16</spring.boot.version>
     </properties>
+    <dependencyManagement>
+        <dependencies>
+            <!-- Import Spring Boot BOM to control versions for Spring artifacts -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring.boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <build>
         <plugins>

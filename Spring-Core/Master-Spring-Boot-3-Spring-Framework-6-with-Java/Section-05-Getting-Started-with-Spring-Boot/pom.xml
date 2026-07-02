@@ -1,0 +1,73 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.tutorials.sid.spring</groupId>
+        <artifactId>Master-Spring-Boot-3-Spring-Framework-6-with-Java</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>Section-05-Getting-Started-with-Spring-Boot</artifactId>
+    <packaging>jar</packaging>
+
+    <name>Section-05-Getting-Started-with-Spring-Boot</name>
+    <url>http://maven.apache.org</url>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <Project.name>Section-05-Getting-Started-with-Spring-Boot</Project.name>
+        <start-class>com.tutorials.sid.spring.App</start-class>
+    </properties>
+
+    <dependencies>
+        <!-- JUnit 5 API (version from parent's dependencyManagement) -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+        </dependency>
+        <!-- JUnit 5 Engine (version from parent's dependencyManagement) -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+        </dependency>
+        <!-- Lombok (version from parent's dependencyManagement) -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.tutorials.sid.spring</groupId>         <!-- or inherited parent groupId -->
+            <artifactId>Spring-MOCK-Data-App</artifactId>
+            <version>0.0.1-SNAPSHOT</version>                  <!--optional if inherited from parent -->
+        </dependency>
+
+        <!-- Spring boot dependency details -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.junit.vintage</groupId>
+                    <artifactId>junit-vintage-engine</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+    </dependencies>
+</project>

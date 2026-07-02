@@ -1,0 +1,56 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.tutorials.sid.spring</groupId>
+        <artifactId>Master-Spring-Boot-3-Spring-Framework-6-with-Java</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>Section-03.-Using-Spring-Framework-to-Create-and-Manage-Your-Java-Objects</artifactId>
+    <packaging>jar</packaging>
+
+    <name>Section-03.-Using-Spring-Framework-to-Create-and-Manage-Your-Java-Objects</name>
+    <url>http://maven.apache.org</url>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <Project.name>Section-03.-Using-Spring-Framework-to-Create-and-Manage-Your-Java-Objects</Project.name>
+    </properties>
+
+    <dependencies>
+        <!-- JUnit 5 API (version from parent's dependencyManagement) -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+        </dependency>
+        <!-- JUnit 5 Engine (version from parent's dependencyManagement) -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+        </dependency>
+        <!-- Lombok (version from parent's dependencyManagement) -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.tutorials.sid.spring</groupId>         <!-- or inherited parent groupId -->
+            <artifactId>Spring-MOCK-Data-App</artifactId>
+            <version>0.0.1-SNAPSHOT</version>                  <!--optional if inherited from parent -->
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+</project>

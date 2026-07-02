@@ -3,9 +3,10 @@
  */
 package com.tutorials.sid.spring;
 
+import org.springframework.beans.factory.annotation.Required;
+
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Required;
 
 /**
  * @author Lenovo
