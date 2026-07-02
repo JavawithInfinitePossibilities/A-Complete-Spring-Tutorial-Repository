@@ -1,0 +1,67 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.tutorials.sid.spring</groupId>
+        <artifactId>Master-Spring-Boot-3-Spring-Framework-6-with-Java</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>Section-05-Getting-Started-with-Spring-Boot</artifactId>
+    <packaging>jar</packaging>
+
+    <name>Section-05-Getting-Started-with-Spring-Boot</name>
+    <url>http://maven.apache.org</url>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <Project.name>Section-04-Exploring-Spring-Framework-Advanced-Features</Project.name>
+        <start-class>com.tutorials.sid.spring.App</start-class>
+    </properties>
+    <!--
+    what is the difference between spring-boot-starter-parent and spring-boot-starter dependency
+    1.  spring-boot-starter-parent is a parent pom that provides default configurations and dependencies for Spring Boot projects.
+    It includes the spring-boot-starter dependency and other commonly used dependencies.
+    2.  On the other hand, spring-boot-starter is a dependency that provides a set of commonly used dependencies for a specific
+    Spring Boot module or feature. By using spring-boot-starter-parent, you can inherit the default configurations
+    and dependencies provided by Spring Boot, while using spring-boot-starter allows you to include only the specific dependencies
+    you need for your project.
+    3.  The fundamental difference is that spring-boot-starter-parent is a project management tool (a Parent POM)
+    that configures your entire build environment, whereas spring-boot-starter is an actual library dependency
+    that pulls core Spring Boot features into your application's classpath.
+
+    Feature                         spring-boot-starter-parent                      spring-boot-starter
+    Maven Element                   Declared in the <parent> tag.                   Declared in the <dependencies> tag.
+    Primary Purpose                 Manages dependency versions,                    Serves as the fundamental "starter kit"
+                                    default Java compilation levels,                to download core Spring Boot frameworks,
+                                    encoding settings, and plugin                   auto-configuration engines, and logging tools.
+                                    configurations.
+    Quantity                        Only one parent project is                      Multiple starter dependencies
+                                    allowed per Maven project.                      can be added alongside it (e.g., web, security, test)
+    Classpath Impact                Does not add JAR files directly                 Directly populates your classpath
+                                    to the project's runtime classpath.             with essential framework JAR files.
+    -->
+    <dependencies>
+        <dependency>
+            <groupId>com.tutorials.sid.spring</groupId>         <!-- or inherited parent groupId -->
+            <artifactId>Spring-MOCK-Data-App</artifactId>
+            <version>0.0.1-SNAPSHOT</version>                  <!--optional if inherited from parent -->
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+</project>
