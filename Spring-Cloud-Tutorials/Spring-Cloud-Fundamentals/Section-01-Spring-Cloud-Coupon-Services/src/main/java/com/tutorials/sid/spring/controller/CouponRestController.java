@@ -19,9 +19,8 @@ import com.tutorials.sid.spring.repo.ICouponRepo;
  *         Project REST URL:
  *         http://localhost:8080/couponcart/couponapi/createcoupon <br/>
  *         Input value: <br/>
- *         { "code": "SUPERSEAL2021", "discount": 15.000, "exp_date":
- *         "31122021"}
- *         http://localhost:8080/couponcart/couponapi/getcoupon/SUPERSEAL
+ *         { "code": "SUPERSEAL2021", "discount": 15.000, "exp_date":"31122021"}
+ *         http://localhost:8080/couponcart/couponapi/getcoupon/SUPERNEWYEAR
  *
  */
 @RestController
@@ -38,16 +37,14 @@ public class CouponRestController {
 	}
 
 	/**
-	 * @RequestMapping(value = "/getcoupon/{couponCode}", method =
-	 *                       RequestMethod.GET)
+	 * @RequestMapping(value = "/getcoupon/{couponCode}", method = RequestMethod.GET)
 	 */
 	/**
 	 * 
 	 * @param couponCode <br/>
-	 *                   This is replaced for to check the fault tolerant. <br/>
-	 *                   To work properly please replace the above annotation line
-	 * @RequestMapping(value = "/getcouponI/{couponCode}", method =
-	 *                       RequestMethod.GET)
+	 *                   This is replaced for to check the fault-tolerant. <br/>
+	 *                   To work properly, please replace the above annotation line
+	 * @RequestMapping(value = "/getcouponI/{couponCode}", method = RequestMethod.GET)
 	 */
 	@RequestMapping(value = "/getcoupon/{couponCode}", method = RequestMethod.GET)
 	public Coupon getCoupon(@PathVariable("couponCode") String couponCode) {

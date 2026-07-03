@@ -11,11 +11,17 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * @author Lenovo
  *
  */
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity(name = "coupon")
 public class Coupon implements Serializable {
 
@@ -32,43 +38,6 @@ public class Coupon implements Serializable {
 	private BigDecimal discount;
 	@Column(name = "exp_date")
 	private String exp_date;
-
-	public long getId() {
-		return id;
-	}
-
-	public void setId(long id) {
-		this.id = id;
-	}
-
-	public String getCode() {
-		return code;
-	}
-
-	public void setCode(String code) {
-		this.code = code;
-	}
-
-	public BigDecimal getDiscount() {
-		return discount;
-	}
-
-	public void setDiscount(BigDecimal discount) {
-		this.discount = discount;
-	}
-
-	public String getExp_date() {
-		return exp_date;
-	}
-
-	public void setExp_date(String exp_date) {
-		this.exp_date = exp_date;
-	}
-
-	@Override
-	public String toString() {
-		return "Coupon [id=" + id + ", code=" + code + ", discount=" + discount + ", exp_date=" + exp_date + "]";
-	}
 
 }
 

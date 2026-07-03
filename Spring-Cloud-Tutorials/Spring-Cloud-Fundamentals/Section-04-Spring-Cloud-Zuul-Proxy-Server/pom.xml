@@ -17,30 +17,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<Project.name>Section-04-Spring-Cloud-Zuul-Proxy-Server</Project.name>
 		<start-class>com.tutorials.sid.spring.Section04SpringCloudZuulProxyServer</start-class>
-		<maven.compiler.source>11</maven.compiler.source>
-		<maven.compiler.target>11</maven.compiler.target>
-		<spring-cloud.version>2020.0.3</spring-cloud.version>
 	</properties>
-
-	<dependencyManagement>
-		<dependencies>
-			<!-- Import Spring Boot BOM to control versions for Spring artifacts -->
-			<dependency>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-dependencies</artifactId>
-				<version>${spring.boot.version}</version>
-				<type>pom</type>
-				<scope>import</scope>
-			</dependency>
-			<dependency>
-				<groupId>org.springframework.cloud</groupId>
-				<artifactId>spring-cloud-dependencies</artifactId>
-				<version>${spring-cloud.version}</version>
-				<type>pom</type>
-				<scope>import</scope>
-			</dependency>
-		</dependencies>
-	</dependencyManagement>
 
 	<dependencies>
 		<dependency>
@@ -48,10 +25,20 @@
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 		</dependency>
 
-		<dependency>
+		<!-- spring-cloud-starter-sleuth and spring-cloud-sleuth-zipkin were officially deprecated.
+       The Last supported version was 3.1.4, which was released in 2021 was supported by Spring boot 2.7.14.
+       -->
+		<!--<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-sleuth</artifactId>
+		</dependency>-->
+
+		<!-- 2. Replaces spring-cloud-starter-sleuth -->
+		<dependency>
+			<groupId>io.micrometer</groupId>
+			<artifactId>micrometer-tracing-bridge-otel</artifactId> <!-- Uses OpenTelemetry bridge -->
 		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>

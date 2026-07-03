@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package com.tutorials.sid.spring;
 
@@ -16,11 +16,11 @@ import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 @EnableEurekaServer
 public class Section03SpringCloudEurekaServer {
 
-	/**
-	 * @param args
-	 */
-	public static void main(String[] args) {
-		SpringApplication.run(Section03SpringCloudEurekaServer.class, args);
-	}
+    /**
+     * @param args
+     */
+    public static void main(String[] args) {
+        SpringApplication.run(Section03SpringCloudEurekaServer.class, args);
+    }
 
 }

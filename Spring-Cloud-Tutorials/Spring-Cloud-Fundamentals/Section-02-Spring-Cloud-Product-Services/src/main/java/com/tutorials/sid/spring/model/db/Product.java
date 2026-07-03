@@ -11,11 +11,18 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Transient;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * @author Lenovo
  *
  */
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity(name = "product")
 public class Product implements Serializable {
 
@@ -24,7 +31,7 @@ public class Product implements Serializable {
 	 */
 	private static final long serialVersionUID = 1L;
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	@Column(name = "product_name")
 	private String name;
@@ -35,69 +42,18 @@ public class Product implements Serializable {
 	@Transient
 	private String couponCode;
 
-	/**
-	 * 
-	 */
-	public Product() {
-
-	}
 
 	/**
 	 * @param name
 	 * @param description
 	 * @param price
 	 */
+	@Builder
 	public Product(String name, String description, double price) {
 		super();
 		this.name = name;
 		this.description = description;
 		this.price = price;
-	}
-
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public String getDescription() {
-		return description;
-	}
-
-	public void setDescription(String description) {
-		this.description = description;
-	}
-
-	public double getPrice() {
-		return price;
-	}
-
-	public void setPrice(double price) {
-		this.price = price;
-	}
-
-	public String getCouponCode() {
-		return couponCode;
-	}
-
-	public void setCouponCode(String couponCode) {
-		this.couponCode = couponCode;
-	}
-
-	@Override
-	public String toString() {
-		return "Product [id=" + id + ", name=" + name + ", description=" + description + ", price=" + price
-				+ ", couponCode=" + couponCode + "]";
 	}
 
 }

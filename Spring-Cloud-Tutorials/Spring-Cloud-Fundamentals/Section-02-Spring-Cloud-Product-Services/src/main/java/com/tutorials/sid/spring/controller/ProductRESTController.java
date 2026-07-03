@@ -30,13 +30,17 @@ import io.github.resilience4j.retry.annotation.Retry;
 /**
  * @author Lenovo URL :
  *         http://localhost:9090/productcart/productdetails/products/
- *         http://localhost:9090/productcart/productdetails/getprop
+ *         http://localhost:9090/productcart/productdetails/getprop/
  *         http://localhost:9090/productcart/productdetails/productById/2
  *         http://localhost:9090/productcart/productdetails/productSave/
+ *         http://localhost:9091/productcart/productdetails/productSave/
  *         http://localhost:8765/product-services/productcart/productdetails/productSave/
+ *         http://localhost:9091/product-services/productcart/productdetails/productSave/
+ *         http://localhost:9091/product-services/productcart/productdetails/getprop
  *         Input JSON:<br/>
- *         { "id": 2, "name": "Iphone", "description": "Iphone Apple", "price":
- *         1200.0, "couponCode": "SUPERSEAL2021" }
+ *         { "id": 2, "name": "Iphone", "description": "Iphone Apple", "price": 1200.0, "couponCode": "SUPERSEAL2021" }
+ *
+ *         http://localhost:9090/productcart/actuator/refresh
  *
  */
 @RestController
@@ -61,22 +65,22 @@ public class ProductRESTController {
 	}
 
 	@RequestMapping(value = "/productById/{id}", method = RequestMethod.GET)
-	@Transactional(readOnly = true)
-	@Cacheable("product-cache")
+	/*@Transactional(readOnly = true)
+	@Cacheable("product-cache")*/
 	public Product getProduct(@PathVariable("id") int id) {
 		LOGGER.info("Finding product by id : " + id);
 		return productRepository.findById(id).get();
 	}
 
 	@RequestMapping(value = "/productByName/{name}", method = RequestMethod.GET)
-	@Transactional(readOnly = true)
+	/*@Transactional(readOnly = true)*/
 	public List<Product> getProductByName(@PathVariable("name") String name) {
 		LOGGER.info("Finding product by name : " + name);
 		return productRepository.findByName(name);
 	}
 
 	@RequestMapping(value = "/productByNameAndPrice/{name}&{price}", method = RequestMethod.GET)
-	@Transactional(readOnly = true)
+	/*@Transactional(readOnly = true)*/
 	public List<Product> getProductByNameAndPrice(@PathVariable("name") String name,
 			@PathVariable("price") double price) {
 		LOGGER.info("Finding product by name : " + name + " and Price :" + price);
@@ -94,13 +98,14 @@ public class ProductRESTController {
 	}
 
 	public Product sendErrorResponse(Product product, Exception exception) {
-		System.out.println("Error while connecting to coupon services" + exception);
+		System.out.println("Error while connecting to coupon services : " + exception);
 		return product;
 	}
 
+	// The getProp endpoint is used to return a property value. Allow GET so it can be fetched via browser
 	@RequestMapping(value = "/getprop/", method = RequestMethod.GET)
-	@Transactional(readOnly = true)
-	@Cacheable("product-cache")
+	/*@Transactional(readOnly = true)
+	@Cacheable("product-cache")*/
 	public String getProp() {
 		return myCustomProperty;
 	}
@@ -111,7 +116,7 @@ public class ProductRESTController {
 	}
 
 	@RequestMapping(value = "/productDelete/{id}", method = RequestMethod.DELETE)
-	@CacheEvict("product-cache")
+	/*@CacheEvict("product-cache")*/
 	public void deleteProduct(@PathVariable("id") int id) {
 		productRepository.deleteById(id);
 	}

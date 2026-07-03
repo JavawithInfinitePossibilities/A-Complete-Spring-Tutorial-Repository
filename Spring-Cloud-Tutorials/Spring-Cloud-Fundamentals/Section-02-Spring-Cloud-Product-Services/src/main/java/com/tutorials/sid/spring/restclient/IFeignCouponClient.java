@@ -13,7 +13,7 @@ import com.tutorials.sid.spring.model.dto.Coupon;
  * @author Lenovo
  *
  */
-//@FeignClient("zuul-api-getway-services")
+/*@FeignClient("COUPON-SERVICES")*/
 @FeignClient("APIGATEWAY-SERVICES")
 public interface IFeignCouponClient {
 
