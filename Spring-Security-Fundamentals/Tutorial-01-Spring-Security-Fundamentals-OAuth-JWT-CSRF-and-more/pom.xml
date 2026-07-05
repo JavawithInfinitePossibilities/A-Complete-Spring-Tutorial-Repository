@@ -1,0 +1,36 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.tutorials.sid.spring</groupId>
+        <artifactId>Spring-Security-Fundamentals</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>Tutorial-01-Spring-Security-Fundamentals-OAuth-JWT-CSRF-and-more</artifactId>
+    <packaging>pom</packaging>
+
+    <name>Tutorial-01-Spring-Security-Fundamentals-OAuth-JWT-CSRF-and-more</name>
+    <url>http://maven.apache.org</url>
+    <modules>
+        <module>Section-01-introduction</module>
+        <module>Section-02-Project-software-setup</module>
+        <module>Section-03-The-Fundamentals</module>
+        <module>Section-04-Create-Microservices</module>
+        <module>Section-04-Create-Microservices-Couponservices</module>
+        <module>Section-05-Secure-REST-API</module>
+        <module>Section-06-Secure-Webapp-Couponservices</module>
+        <module>Section-07-CSRF</module>
+        <module>Section-08-CORS</module>
+        <module>Section-09-Security-Testing</module>
+        <module>Section-10-Method-Level-Security</module>
+        <module>Section-11-OAuth-And-JWT-Concepts</module>
+        <module>Section-12-Authorization-Server</module>
+        <module>Section-12-Resources-Servers</module>
+    </modules>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+</project>

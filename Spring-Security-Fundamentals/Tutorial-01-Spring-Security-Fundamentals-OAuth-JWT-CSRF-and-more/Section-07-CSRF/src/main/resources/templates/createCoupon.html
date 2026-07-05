@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Coupon</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .coupon-container {
+            width: 100%;
+            max-width: 440px;
+            padding: 20px;
+        }
+
+        .coupon-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        .coupon-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        .coupon-header h2 {
+            font-size: 28px;
+            font-weight: 700;
+            margin: 0;
+            letter-spacing: 0.5px;
+        }
+
+        .coupon-body {
+            padding: 40px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: 500;
+            font-size: 14px;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="date"] {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            font-family: inherit;
+        }
+
+        .form-group input[type="text"]:focus,
+        .form-group input[type="date"]:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .save-button {
+            width: 100%;
+            padding: 12px 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-top: 10px;
+        }
+
+        .save-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        .save-button:active {
+            transform: translateY(0);
+        }
+
+        .coupon-footer {
+            padding: 20px 40px;
+            text-align: center;
+            background-color: #f9f9f9;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .coupon-footer p {
+            margin: 0;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .coupon-footer a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+            margin-left: 5px;
+        }
+
+        .coupon-footer a:hover {
+            color: #764ba2;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 480px) {
+            .coupon-card {
+                border-radius: 10px;
+            }
+
+            .coupon-body {
+                padding: 30px 20px;
+            }
+
+            .coupon-header h2 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="coupon-container">
+    <div class="coupon-card">
+        <div class="coupon-header">
+            <h2>🎟️ Create Coupon</h2>
+        </div>
+        <div class="coupon-body">
+            <form action="#" th:action="@{/saveCoupon}" method="post">
+                <div class="form-group">
+                    <label for="code">Coupon Code</label>
+                    <input type="text" id="code" name="code" placeholder="Enter coupon code" required>
+                </div>
+                <div class="form-group">
+                    <label for="discount">Discount</label>
+                    <input type="text" id="discount" name="discount" placeholder="Enter discount amount" required>
+                </div>
+                <div class="form-group">
+                    <label for="expDate">Expiry Date</label>
+                    <input type="date" id="expDate" name="expDate" required>
+                </div>
+                <button type="submit" class="save-button">Save Coupon</button>
+            </form>
+        </div>
+        <div class="coupon-footer">
+            <p>Back to <a href="/Section-06-Secure-Webapp-Couponservices/">Home</a></p>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

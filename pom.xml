@@ -99,5 +99,6 @@
         <module>Spring-Boot-Tutorials</module>
         <module>Spring-Cloud-Tutorials</module>
         <module>Spring-Hibernate-Tutorials</module>
+        <module>Spring-Security-Fundamentals</module>
     </modules>
 </project>
