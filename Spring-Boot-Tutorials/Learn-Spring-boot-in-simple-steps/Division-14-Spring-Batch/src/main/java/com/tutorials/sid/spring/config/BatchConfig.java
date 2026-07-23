@@ -8,7 +8,6 @@ import org.springframework.batch.core.Step;
 import org.springframework.batch.core.job.builder.JobBuilder;
 import org.springframework.batch.core.step.builder.StepBuilder;
 import org.springframework.batch.core.repository.JobRepository;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.batch.core.launch.support.RunIdIncrementer;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -51,7 +50,6 @@ public class BatchConfig {
     private JobRepository jobRepository;
 
     @Autowired
-    @Qualifier("platformTransectionManager")
     private PlatformTransactionManager platformTransactionManager;
 
     @Bean

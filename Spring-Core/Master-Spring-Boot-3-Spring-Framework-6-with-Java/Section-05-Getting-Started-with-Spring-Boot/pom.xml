@@ -16,7 +16,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <Project.name>Section-04-Exploring-Spring-Framework-Advanced-Features</Project.name>
-        <start-class>com.tutorials.sid.spring.App</start-class>
+        <start-class>com.tutorials.sid.spring.Division17SwaggerRESTDocumentationQuickstart</start-class>
     </properties>
     <!--
     what is the difference between spring-boot-starter-parent and spring-boot-starter dependency

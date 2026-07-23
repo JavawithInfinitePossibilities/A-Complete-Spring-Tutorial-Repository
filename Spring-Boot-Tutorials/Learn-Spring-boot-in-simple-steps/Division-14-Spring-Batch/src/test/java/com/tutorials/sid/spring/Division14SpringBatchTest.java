@@ -13,6 +13,8 @@ import org.springframework.batch.core.repository.JobInstanceAlreadyCompleteExcep
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import javax.sql.DataSource;
+
 @SpringBootTest(classes = Division14SpringBatch.class)
 class Division14SpringBatchTest {
 
@@ -25,7 +27,9 @@ class Division14SpringBatchTest {
 	@Test
 	void testBatch() throws JobExecutionAlreadyRunningException, JobInstanceAlreadyCompleteException,
 			JobParametersInvalidException, JobRestartException {
-		JobParameters jobParameters = new JobParametersBuilder().toJobParameters();
+		JobParameters jobParameters = new JobParametersBuilder()
+				.addLong("run.id", System.currentTimeMillis())
+				.toJobParameters();
 		jobLuncher.run(job, jobParameters);
 	}
 

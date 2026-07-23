@@ -31,5 +31,7 @@
 		<module>Division-14-Spring-Batch-DB-Operation</module>
 		<module>Division-15-Unit-Testing-using-MockMvc</module>
 		<module>Division-16-Messaging-and-Spring-JMS</module>
+		<module>Division-17-Swagger-REST-Documentation-Quickstart</module>
+		<module>Division-18-Validations</module>
 	</modules>
 </project>

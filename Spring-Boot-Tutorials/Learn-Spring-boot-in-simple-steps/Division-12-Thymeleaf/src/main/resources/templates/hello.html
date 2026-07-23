@@ -1,5 +1,127 @@
-<html>
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello Thymeleaf</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f4f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            padding: 48px 56px;
+            text-align: center;
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .badge {
+            display: inline-block;
+            background-color: #e8f5e9;
+            color: #2e7d32;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            padding: 6px 14px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            color: #1a237e;
+            margin-bottom: 12px;
+        }
+
+        .subtitle {
+            color: #607d8b;
+            font-size: 1rem;
+            margin-bottom: 40px;
+        }
+
+        .nav-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+        }
+
+        .nav-link {
+            display: block;
+            padding: 14px 18px;
+            background-color: #1a237e;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: background-color 0.2s ease, transform 0.1s ease;
+        }
+
+        .nav-link:hover {
+            background-color: #283593;
+            transform: translateY(-2px);
+        }
+
+        .nav-link span {
+            display: block;
+            font-size: 0.75rem;
+            font-weight: 400;
+            color: #c5cae9;
+            margin-top: 4px;
+        }
+
+        footer {
+            margin-top: 36px;
+            font-size: 0.78rem;
+            color: #b0bec5;
+        }
+    </style>
+</head>
 <body>
-	<h1>Hello THYMELEAF</h1>
+    <div class="container">
+
+        <div class="badge">Spring Boot + Thymeleaf</div>
+
+        <h1>Hello, Thymeleaf! 👋</h1>
+        <p class="subtitle">Welcome to Division 12 — Thymeleaf Template Engine Demo</p>
+
+        <nav class="nav-grid">
+            <a th:href="@{/senddata}" class="nav-link">
+                Send Data
+                <span>ModelAndView with message</span>
+            </a>
+            <a th:href="@{/student}" class="nav-link">
+                Student Detail
+                <span>Single student object</span>
+            </a>
+            <a th:href="@{/students}" class="nav-link">
+                All Students
+                <span>List with th:each</span>
+            </a>
+            <a th:href="@{/studentform}" class="nav-link">
+                Student Form
+                <span>Form binding with th:object</span>
+            </a>
+        </nav>
+
+        <footer>Division-12-Thymeleaf &mdash; Spring Boot Tutorials</footer>
+
+    </div>
 </body>
 </html>

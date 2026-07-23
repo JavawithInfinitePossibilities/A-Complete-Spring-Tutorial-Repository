@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Details</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #e0f2fe 0%, #f0fdf4 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 32px 16px;
+        }
+
+        .card {
+            background: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+            padding: 40px 36px;
+            width: 100%;
+            max-width: 680px;
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 28px;
+        }
+
+        .card-header-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .card-header-left .icon {
+            font-size: 32px;
+            line-height: 1;
+        }
+
+        .card-header h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1e293b;
+        }
+
+        .card-header p {
+            color: #64748b;
+            font-size: 0.85rem;
+            margin-top: 2px;
+        }
+
+        .btn {
+            padding: 9px 18px;
+            border: none;
+            border-radius: 8px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: transform 0.15s, box-shadow 0.15s;
+            background: linear-gradient(135deg, #6366f1, #4f46e5);
+            color: #ffffff;
+        }
+
+        .btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.35);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+        }
+
+        .divider {
+            height: 1px;
+            background: #f1f5f9;
+            margin-bottom: 24px;
+        }
+
+        .table-wrapper {
+            overflow-x: auto;
+            border-radius: 10px;
+            border: 1px solid #e2e8f0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+        }
+
+        thead {
+            background: linear-gradient(135deg, #6366f1, #4f46e5);
+            color: #ffffff;
+        }
+
+        thead th {
+            padding: 14px 20px;
+            text-align: left;
+            font-weight: 600;
+            letter-spacing: 0.4px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid #f1f5f9;
+            transition: background 0.15s;
+        }
+
+        tbody tr:last-child {
+            border-bottom: none;
+        }
+
+        tbody tr:hover {
+            background: #f8faff;
+        }
+
+        tbody tr:nth-child(even) {
+            background: #fafafa;
+        }
+
+        tbody tr:nth-child(even):hover {
+            background: #f8faff;
+        }
+
+        tbody td {
+            padding: 14px 20px;
+            color: #374151;
+        }
+
+        tbody td:first-child {
+            font-weight: 600;
+            color: #6366f1;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 48px 20px;
+            color: #94a3b8;
+        }
+
+        .empty-state .empty-icon {
+            font-size: 48px;
+            display: block;
+            margin-bottom: 12px;
+        }
+
+        .empty-state p {
+            font-size: 0.95rem;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #ede9fe;
+            color: #6366f1;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 3px 10px;
+            border-radius: 999px;
+            margin-left: 8px;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+
+        <div class="card-header">
+            <div class="card-header-left">
+                <span class="icon">🎓</span>
+                <div>
+                    <h1>All Students <span class="badge" th:text="${#lists.size(students)}">0</span></h1>
+                    <p>Complete list of registered students</p>
+                </div>
+            </div>
+            <a th:href="@{/}" class="btn">➕ Add Student</a>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- Table shown when there are students -->
+        <div class="table-wrapper" th:if="${not #lists.isEmpty(students)}">
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Roll No</th>
+                        <th>Name</th>
+                        <th>Score</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="student, iterStat : ${students}">
+                        <td th:text="${iterStat.count}"></td>
+                        <td th:text="${student.id}"></td>
+                        <td th:text="${student.name}"></td>
+                        <td th:text="${student.score}"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Empty state shown when no students exist -->
+        <div class="empty-state" th:if="${#lists.isEmpty(students)}">
+            <span class="empty-icon">📭</span>
+            <p>No students found. Add one to get started!</p>
+        </div>
+
+    </div>
+
+</body>
+</html>

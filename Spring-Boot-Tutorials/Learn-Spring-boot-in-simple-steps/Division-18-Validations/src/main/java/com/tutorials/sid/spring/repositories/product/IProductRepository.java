@@ -1,0 +1,25 @@
+/**
+* 
+*/
+package com.tutorials.sid.spring.repositories.product;
+
+import com.tutorials.sid.spring.entities.Product;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
+
+import java.util.List;
+
+/**
+ * @author Lenovo
+ *
+ */
+public interface IProductRepository extends JpaRepository<Product, Integer> {
+
+	public List<Product> findByName(String name);
+
+	@Query("Select p from product p where name like %:name% and price>=:price")
+	public List<Product> findByNameLikeAndPrice(@Param("name") String name, @Param("price") double price);
+
+}
+

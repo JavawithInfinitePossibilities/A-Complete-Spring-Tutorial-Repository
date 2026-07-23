@@ -10,11 +10,19 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * @author Lenovo
  *
  */
+@Builder
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity(name = "studentdb")
 public class StudentDB implements Serializable {
 
@@ -27,35 +35,6 @@ public class StudentDB implements Serializable {
 	private String name;
 	@Column(name = "test_score")
 	private int testScore;
-
-	public long getId() {
-		return id;
-	}
-
-	public void setId(long id) {
-		this.id = id;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public int getTestScore() {
-		return testScore;
-	}
-
-	public void setTestScore(int testScore) {
-		this.testScore = testScore;
-	}
-
-	@Override
-	public String toString() {
-		return "StudentDB [id=" + id + ", name=" + name + ", testScore=" + testScore + "]";
-	}
 
 }
 

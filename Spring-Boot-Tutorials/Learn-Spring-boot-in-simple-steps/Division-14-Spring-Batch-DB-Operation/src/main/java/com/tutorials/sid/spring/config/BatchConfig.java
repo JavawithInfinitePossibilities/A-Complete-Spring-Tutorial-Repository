@@ -47,7 +47,6 @@ public class BatchConfig {
     private JobRepository jobRepository;
 
     @Autowired
-    @Qualifier("platformTransectionManager")
     private PlatformTransactionManager platformTransactionManager;
 
     @Bean
@@ -86,7 +85,7 @@ public class BatchConfig {
         writer.setDataSource(datasource);
         writer.setItemSqlParameterSourceProvider(new BeanPropertyItemSqlParameterSourceProvider<Product>());
         writer.setSql(
-                "INSERT INTO product (id,product_name, product_description, product_price) VALUES (:id,:name,:description,:price)");
+                "INSERT INTO product (product_name, product_description, product_price) VALUES (:name,:description,:price)");
         return writer;
     }
 

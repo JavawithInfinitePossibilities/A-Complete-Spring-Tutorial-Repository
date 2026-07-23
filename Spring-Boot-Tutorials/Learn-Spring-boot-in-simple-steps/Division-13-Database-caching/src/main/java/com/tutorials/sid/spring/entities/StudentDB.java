@@ -11,20 +11,18 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 /**
  * @author Lenovo
  *
  */
-@Entity(name = "studentdb")
-@AllArgsConstructor
+
+@Builder
+@Data
 @NoArgsConstructor
-@Getter
-@Setter
+@AllArgsConstructor
+@Entity(name = "studentdb")
 public class StudentDB implements Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -36,11 +34,6 @@ public class StudentDB implements Serializable {
 	private String name;
 	@Column(name = "test_score")
 	private int testScore;
-
-	@Override
-	public String toString() {
-		return "StudentDB [id=" + id + ", name=" + name + ", testScore=" + testScore + "]";
-	}
 
 }
 

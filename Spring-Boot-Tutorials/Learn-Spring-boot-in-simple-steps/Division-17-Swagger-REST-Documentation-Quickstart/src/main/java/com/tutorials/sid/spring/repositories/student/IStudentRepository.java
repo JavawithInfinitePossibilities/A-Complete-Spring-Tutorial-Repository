@@ -1,0 +1,17 @@
+package com.tutorials.sid.spring.repositories.student;
+
+import com.tutorials.sid.spring.entities.StudentDB;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
+
+import java.util.List;
+
+public interface IStudentRepository extends JpaRepository<StudentDB, Long> {
+
+	public List<StudentDB> findByName(String name);
+
+	@Query("Select s from studentdb s where name like %:name% and testScore=:score")
+	public List<StudentDB> findByNameLikeAndScore(@Param("name") String name, @Param("score") int score);
+}
+

@@ -12,37 +12,37 @@ import com.tutorials.sid.spring.services.IPaymentServices;
 @SpringBootTest(classes = Division04FirstProject.class)
 class Division04FirstProjectTest {
 
-	@Autowired
-	IPaymentServices iPaymentServices;
+    @Autowired
+    IPaymentServices iPaymentServices;
 
-	@Test
-	void test() {
-		assertNotNull(iPaymentServices, "Value is not null!!!");
-	}
+    @Test
+    void test() {
+        assertNotNull(iPaymentServices, "Value is not null!!!");
+    }
 
-	@Disabled
-	@Test
-	void testCreate() {
-		iPaymentServices.create();
-	}
+    @Disabled
+    @Test
+    void testCreate() {
+        iPaymentServices.create();
+    }
 
-	@Disabled
-	@Test
-	void testUpdate() {
-		iPaymentServices.update();
-	}
+    @Disabled
+    @Test
+    void testUpdate() {
+        iPaymentServices.update();
+    }
 
-	@Disabled
-	@Test
-	void testDelete() {
-		iPaymentServices.delete();
-	}
+    @Disabled
+    @Test
+    void testDelete() {
+        iPaymentServices.delete();
+    }
 
-	@Disabled
-	@Test
-	void testSelect() {
-		iPaymentServices.get();
-	}
+    @Disabled
+    @Test
+    void testSelect() {
+        iPaymentServices.get();
+    }
 
 }
 

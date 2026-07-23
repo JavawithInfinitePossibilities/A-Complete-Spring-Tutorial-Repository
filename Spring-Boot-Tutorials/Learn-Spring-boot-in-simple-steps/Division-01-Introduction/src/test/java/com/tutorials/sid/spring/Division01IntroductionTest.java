@@ -8,10 +8,9 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest(classes = Division01Introduction.class)
 class Division01IntroductionTest {
 
-	@Test
-	void test() {
-		System.out.println("Welcome to spring boot tutorials...");
-	}
+    @Test
+    void test() {
+        System.out.println("Welcome to spring boot tutorials...");
+    }
 
 }
-

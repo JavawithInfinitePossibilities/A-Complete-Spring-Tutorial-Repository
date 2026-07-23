@@ -8,7 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
  * @author Lenovo
- *
+ * Actuator Endpoints: http://localhost:8080/{context-path}/actuator
  */
 @SpringBootApplication
 public class Division11SpringSecurity {

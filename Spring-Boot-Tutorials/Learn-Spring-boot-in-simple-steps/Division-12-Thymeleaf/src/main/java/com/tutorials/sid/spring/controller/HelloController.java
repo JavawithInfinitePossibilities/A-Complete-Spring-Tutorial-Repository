@@ -20,6 +20,7 @@ import com.tutorials.sid.spring.model.Student;
  *         http://localhost:8080/studentseminar/student
  *         http://localhost:8080/studentseminar/students
  *         http://localhost:8080/studentseminar/studentform
+ *         http://localhost:8080/studentseminar/studentsave
  *
  */
 @Controller

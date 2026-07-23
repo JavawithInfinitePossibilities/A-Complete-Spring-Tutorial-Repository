@@ -19,7 +19,7 @@ public interface IProductRepository extends JpaRepository<Product, Integer> {
 
 	public List<Product> findByName(String name);
 
-	@Query("Select p from product p where product_name like %:name% and price>=:price")
+	@Query("Select p from product p where name like %:name% and price>=:price")
 	public List<Product> findByNameLikeAndPrice(@Param("name") String name, @Param("price") double price);
 
 }

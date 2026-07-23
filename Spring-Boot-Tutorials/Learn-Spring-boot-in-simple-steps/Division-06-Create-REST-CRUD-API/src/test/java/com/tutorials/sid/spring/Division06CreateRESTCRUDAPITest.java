@@ -1,5 +1,6 @@
 package com.tutorials.sid.spring;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -18,20 +19,20 @@ class Division06CreateRESTCRUDAPITest {
 		StudentDB studentDB = new StudentDB();
 		// studentDB.setId(1l);
 		studentDB.setName("Siddhant");
-		studentDB.setTestScore(100);
+		studentDB.setTestScore(80);
 
 		studentRepo.save(studentDB);
 
 		// Select
-		StudentDB saveStudent = studentRepo.findById(1l).get();
-		System.out.println(saveStudent);
+		StudentDB saveStudent = studentRepo.findById(203l).get();
+		Assertions.assertNotNull(saveStudent);
 
 		// Update
 
 		studentDB.setTestScore(90);
 		studentRepo.save(studentDB);
-		StudentDB updateStudent = studentRepo.findById(1l).get();
-		System.out.println("Updated student :" + updateStudent);
+		StudentDB updateStudent = studentRepo.findById(203l).get();
+		Assertions.assertNotNull(updateStudent);
 
 		// Delete
 		/*

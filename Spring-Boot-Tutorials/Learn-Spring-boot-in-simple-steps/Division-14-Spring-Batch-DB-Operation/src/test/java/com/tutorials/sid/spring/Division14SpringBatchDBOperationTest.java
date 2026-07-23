@@ -24,7 +24,9 @@ class Division14SpringBatchDBOperationTest {
 	@Test
 	void testBatch() throws JobExecutionAlreadyRunningException, JobRestartException,
 			JobInstanceAlreadyCompleteException, JobParametersInvalidException {
-		JobParameters jobParameters = new JobParametersBuilder().toJobParameters();
+		JobParameters jobParameters = new JobParametersBuilder()
+				.addLong("run.id", System.currentTimeMillis())
+				.toJobParameters();
 		jobLuncher.run(job, jobParameters);
 	}
 

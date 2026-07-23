@@ -15,7 +15,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <Project.name>Section-11-OAuth-And-JWT-Concepts</Project.name>
-        <start-class>com.tutorials.sid.spring.App</start-class>
+        <start-class>com.tutorials.sid.spring.Division17SwaggerRESTDocumentationQuickstart</start-class>
     </properties>
 
     <build>

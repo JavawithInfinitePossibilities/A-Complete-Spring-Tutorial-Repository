@@ -11,6 +11,7 @@ pom.xml.next
 buildNumber.properties
 .mvn/timing.properties
 app.log
+log/*
 
 # Compiled class files
 *.class

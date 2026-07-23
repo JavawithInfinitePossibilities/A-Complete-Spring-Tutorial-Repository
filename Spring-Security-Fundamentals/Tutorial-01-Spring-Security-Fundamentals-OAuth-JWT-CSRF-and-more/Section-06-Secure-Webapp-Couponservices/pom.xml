@@ -14,7 +14,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <Project.name>Section-06-Secure-Webapp-Couponservices</Project.name>
-        <start-class>com.tutorials.sid.spring.App</start-class>
+        <start-class>com.tutorials.sid.spring.Division17SwaggerRESTDocumentationQuickstart</start-class>
     </properties>
 
     <dependencies>
