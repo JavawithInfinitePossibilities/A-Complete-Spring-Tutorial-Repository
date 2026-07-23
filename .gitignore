@@ -52,3 +52,4 @@ Thumbs.db
 node_modules/
 *.swp
 
+/src/main/resources/log/QA/application.log.2026-07-23.0.gz
