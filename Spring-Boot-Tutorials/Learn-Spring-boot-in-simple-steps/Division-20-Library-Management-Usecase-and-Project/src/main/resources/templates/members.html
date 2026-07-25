@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Members — NextGen LMS</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}" href="../static/css/style.css" />
+</head>
+<body>
+
+    <!-- ── Top Navigation Bar ───────────────────────────── -->
+    <header class="navbar">
+        <div class="navbar-brand">
+            <span class="navbar-icon">📚</span>
+            <span class="navbar-title">NextGen LMS</span>
+        </div>
+        <nav class="navbar-links">
+            <a th:href="@{/}"        class="nav-link">🏠 Home</a>
+            <a th:href="@{/}"        class="nav-link">📖 Books</a>
+            <a th:href="@{/members}" class="nav-link nav-link--active">👥 Members</a>
+            <a th:href="@{/borrow}"  class="nav-link">🤝 Borrow</a>
+            <a th:href="@{/return}"  class="nav-link">↩️ Return</a>
+        </nav>
+    </header>
+
+    <!-- ── Page Content ─────────────────────────────────── -->
+    <main class="page-content">
+
+        <!-- Page heading + action button -->
+        <div class="page-header">
+            <div class="page-header__text">
+                <h1 class="page-title">Library Members</h1>
+                <p class="page-subtitle"
+                   th:text="'Showing ' + ${#lists.size(members)} + ' registered member(s)'">
+                    Showing registered members
+                </p>
+            </div>
+            <a th:href="@{/member/new}" class="btn btn-primary">＋ Register New Member</a>
+        </div>
+
+        <!-- ── Members Table ────────────────────────────── -->
+        <div class="table-card">
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th class="col-num">#</th>
+                        <th>Name</th>
+                        <th>Member ID</th>
+                        <th class="col-actions">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!--
+                        th:each  → iterates over 'members' model attribute
+                        stat     → gives row count and odd/even for styling
+                    -->
+                    <tr th:each="member, stat : ${members}"
+                        th:classappend="${stat.odd} ? 'row-odd' : 'row-even'">
+
+                        <td class="col-num" th:text="${stat.count}">1</td>
+
+                        <td>
+                            <span class="member-name" th:text="${member.name}">Member Name</span>
+                        </td>
+
+                        <td>
+                            <span class="member-id-badge" th:text="${member.memberId}">MID-001</span>
+                        </td>
+
+                        <td class="col-actions">
+                            <!--
+                                th:href → /member/{id} with member.id path variable
+                            -->
+                            <a th:href="@{/member/{id}(id=${member.id})}"
+                               class="btn btn-edit">✏️ Edit</a>
+                        </td>
+                    </tr>
+
+                    <!-- Empty state — shown only when no members exist -->
+                    <tr th:if="${#lists.isEmpty(members)}" class="row-empty">
+                        <td colspan="4">
+                            <div class="empty-state">
+                                <span class="empty-state__icon">👤</span>
+                                <p class="empty-state__text">No members registered yet.</p>
+                                <a th:href="@{/member/new}" class="btn btn-primary">＋ Register First Member</a>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- ── Quick Actions ───────────────────────────── -->
+        <div class="action-bar">
+            <a th:href="@{/borrow}"  class="btn btn-secondary">🤝 Borrow a Book</a>
+            <a th:href="@{/return}"  class="btn btn-secondary">↩️ Return a Book</a>
+            <a th:href="@{/books}"   class="btn btn-secondary">📖 View Books</a>
+        </div>
+
+    </main>
+
+    <!-- ── Footer ───────────────────────────────────────── -->
+    <footer class="footer">
+        <p class="footer-text">© 2026 NextGen Library Management System</p>
+    </footer>
+
+</body>
+</html>

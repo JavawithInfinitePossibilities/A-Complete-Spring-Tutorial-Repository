@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Borrow a Book — NextGen LMS</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}" href="../static/css/style.css" />
+</head>
+<body>
+
+    <!-- ── Top Navigation Bar ───────────────────────────── -->
+    <header class="navbar">
+        <div class="navbar-brand">
+            <span class="navbar-icon">📚</span>
+            <span class="navbar-title">NextGen LMS</span>
+        </div>
+        <nav class="navbar-links">
+            <a th:href="@{/}"        class="nav-link">🏠 Home</a>
+            <a th:href="@{/}"        class="nav-link">📖 Books</a>
+            <a th:href="@{/members}" class="nav-link">👥 Members</a>
+            <a th:href="@{/borrow}"  class="nav-link nav-link--active">🤝 Borrow</a>
+            <a th:href="@{/return}"  class="nav-link">↩️ Return</a>
+        </nav>
+    </header>
+
+    <!-- ── Page Content ─────────────────────────────────── -->
+    <main class="page-content">
+
+        <!-- Breadcrumb -->
+        <nav class="breadcrumb">
+            <a th:href="@{/lms}">🏠 Home</a>
+            <span class="breadcrumb-sep">›</span>
+            <span class="breadcrumb-current">Borrow a Book</span>
+        </nav>
+
+        <!-- Form Card -->
+        <div class="form-card">
+
+            <div class="form-card-header">
+                <span class="form-card-icon">🤝</span>
+                <div>
+                    <h1 class="form-title">Borrow a Book</h1>
+                    <p class="form-subtitle">Select a member and the book they wish to borrow.</p>
+                </div>
+            </div>
+
+            <!--
+                th:action → POST to /borrow (context-path prepended automatically)
+                name attributes match @RequestParam in the controller
+            -->
+            <form th:action="@{/borrow}" method="post" novalidate>
+
+                <div class="form-group">
+                    <label for="member">Member <span class="required">*</span></label>
+                    <select id="member" name="memberId" required>
+                        <option value="" disabled selected>— Select a member —</option>
+                        <!--
+                            th:each  → iterates over 'members' model attribute
+                            th:value → binds member.id as the option value
+                            th:text  → displays member.name as the visible label
+                        -->
+                        <option th:each="member : ${members}"
+                                th:value="${member.id}"
+                                th:text="${member.name}">Member Name</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="book">Book <span class="required">*</span></label>
+                    <select id="book" name="bookId" required>
+                        <option value="" disabled selected>— Select a book —</option>
+                        <!--
+                            th:each  → iterates over 'books' model attribute
+                            th:value → binds book.id as the option value
+                            th:text  → displays book.title as the visible label
+                        -->
+                        <option th:each="book : ${books}"
+                                th:value="${book.id}"
+                                th:text="${book.title}">Book Title</option>
+                    </select>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary btn-block">
+                        🤝 Confirm Borrow
+                    </button>
+                    <a th:href="@{/}" class="btn btn-secondary btn-block">
+                        ✕ Cancel
+                    </a>
+                </div>
+
+            </form>
+        </div>
+
+    </main>
+
+    <!-- ── Footer ───────────────────────────────────────── -->
+    <footer class="footer">
+        <p class="footer-text">© 2026 NextGen Library Management System</p>
+    </footer>
+
+</body>
+</html>

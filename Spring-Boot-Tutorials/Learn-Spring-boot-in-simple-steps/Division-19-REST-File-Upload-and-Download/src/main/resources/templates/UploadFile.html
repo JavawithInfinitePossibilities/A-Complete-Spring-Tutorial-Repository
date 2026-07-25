@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>File Upload &amp; Download</title>
+    <style>
+        /* ── Reset & Base ─────────────────────────────────────── */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        /* ── Card ─────────────────────────────────────────────── */
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 20px;
+            padding: 2.5rem 2rem;
+            width: 100%;
+            max-width: 540px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+            color: #e0e0e0;
+        }
+
+        /* ── Header ───────────────────────────────────────────── */
+        .card-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .card-header .icon { font-size: 3rem; margin-bottom: 0.5rem; }
+        .card-header h1 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #ffffff;
+            letter-spacing: 0.5px;
+        }
+        .card-header p {
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.5);
+            margin-top: 0.3rem;
+        }
+
+        /* ── Section titles ───────────────────────────────────── */
+        .section-title {
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: rgba(255,255,255,0.4);
+            margin-bottom: 0.75rem;
+        }
+
+        /* ── Divider ──────────────────────────────────────────── */
+        .divider {
+            border: none;
+            border-top: 1px solid rgba(255,255,255,0.08);
+            margin: 2rem 0;
+        }
+
+        /* ── Drop Zone ────────────────────────────────────────── */
+        .drop-zone {
+            border: 2px dashed rgba(99, 179, 237, 0.4);
+            border-radius: 14px;
+            padding: 2.5rem 1.5rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            background: rgba(99, 179, 237, 0.04);
+            position: relative;
+        }
+        .drop-zone:hover,
+        .drop-zone.drag-over {
+            border-color: #63b3ed;
+            background: rgba(99, 179, 237, 0.1);
+            transform: scale(1.01);
+        }
+        .drop-zone input[type="file"] {
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            cursor: pointer;
+            width: 100%;
+            height: 100%;
+        }
+        .drop-zone .dz-icon { font-size: 2.5rem; margin-bottom: 0.5rem; }
+        .drop-zone .dz-text {
+            font-size: 0.95rem;
+            color: rgba(255,255,255,0.7);
+            font-weight: 500;
+        }
+        .drop-zone .dz-hint {
+            font-size: 0.78rem;
+            color: rgba(255,255,255,0.35);
+            margin-top: 0.25rem;
+        }
+
+        /* ── File preview strip ───────────────────────────────── */
+        #filePreview {
+            display: none;
+            align-items: center;
+            gap: 0.75rem;
+            background: rgba(99, 179, 237, 0.08);
+            border: 1px solid rgba(99, 179, 237, 0.25);
+            border-radius: 10px;
+            padding: 0.75rem 1rem;
+            margin-top: 1rem;
+        }
+        #filePreview .file-icon { font-size: 1.6rem; }
+        #filePreview .file-info { flex: 1; overflow: hidden; }
+        #filePreview .file-name {
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: #fff;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        #filePreview .file-size {
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.45);
+            margin-top: 0.1rem;
+        }
+        #filePreview .remove-btn {
+            background: none;
+            border: none;
+            color: rgba(255,255,255,0.4);
+            font-size: 1.1rem;
+            cursor: pointer;
+            padding: 0.2rem;
+            border-radius: 50%;
+            transition: color 0.2s;
+        }
+        #filePreview .remove-btn:hover { color: #fc8181; }
+
+        /* ── Progress bar ─────────────────────────────────────── */
+        #progressWrap { display: none; margin-top: 1rem; }
+        #progressWrap .progress-label {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.5);
+            margin-bottom: 0.35rem;
+        }
+        .progress-bar-bg {
+            background: rgba(255,255,255,0.1);
+            border-radius: 999px;
+            height: 6px;
+            overflow: hidden;
+        }
+        #progressBar {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, #63b3ed, #4fd1c5);
+            border-radius: 999px;
+            transition: width 0.3s ease;
+        }
+
+        /* ── Buttons ──────────────────────────────────────────── */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            width: 100%;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 10px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            margin-top: 1rem;
+        }
+        .btn-upload {
+            background: linear-gradient(135deg, #4299e1, #3182ce);
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(66, 153, 225, 0.35);
+        }
+        .btn-upload:hover:not(:disabled) {
+            background: linear-gradient(135deg, #63b3ed, #4299e1);
+            transform: translateY(-1px);
+            box-shadow: 0 6px 20px rgba(66, 153, 225, 0.45);
+        }
+        .btn-upload:disabled {
+            opacity: 0.45;
+            cursor: not-allowed;
+            transform: none;
+        }
+        .btn-download {
+            background: linear-gradient(135deg, #38a169, #276749);
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(56, 161, 105, 0.3);
+        }
+        .btn-download:hover {
+            background: linear-gradient(135deg, #48bb78, #38a169);
+            transform: translateY(-1px);
+            box-shadow: 0 6px 20px rgba(56, 161, 105, 0.4);
+        }
+
+        /* ── Download input group ─────────────────────────────── */
+        .input-group { display: flex; gap: 0.5rem; }
+        .input-group input[type="text"] {
+            flex: 1;
+            background: rgba(255,255,255,0.07);
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 10px;
+            padding: 0.75rem 1rem;
+            color: #fff;
+            font-size: 0.9rem;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+        .input-group input[type="text"]::placeholder { color: rgba(255,255,255,0.3); }
+        .input-group input[type="text"]:focus { border-color: #63b3ed; }
+        .input-group .btn-download {
+            width: auto;
+            margin-top: 0;
+            padding: 0.75rem 1.2rem;
+            white-space: nowrap;
+        }
+
+        /* ── Toast ────────────────────────────────────────────── */
+        #toast {
+            position: fixed;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%) translateY(80px);
+            background: #2d3748;
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+            border-radius: 10px;
+            font-size: 0.88rem;
+            font-weight: 500;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.3s;
+            opacity: 0;
+            pointer-events: none;
+            z-index: 1000;
+        }
+        #toast.show { transform: translateX(-50%) translateY(0); opacity: 1; }
+        #toast.success { border-left: 4px solid #48bb78; }
+        #toast.error   { border-left: 4px solid #fc8181; }
+        #toast.info    { border-left: 4px solid #63b3ed; }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+
+        <!-- ── Header ─────────────────────────────────────────── -->
+        <div class="card-header">
+            <div class="icon">📁</div>
+            <h1>File Manager</h1>
+            <p>Upload and download your files securely</p>
+        </div>
+
+        <!-- ── UPLOAD SECTION ─────────────────────────────────── -->
+        <p class="section-title">Upload a File</p>
+
+        <!--
+            th:action   → resolves to /productcart/file/upload (context-path aware)
+            enctype     → required for multipart file upload
+        -->
+        <form id="uploadForm"
+              th:action="@{/file/upload}"
+              method="post"
+              enctype="multipart/form-data">
+
+            <div class="drop-zone" id="dropZone">
+                <!-- name="file" must match @RequestParam("file") in FileController -->
+                <input type="file" name="file" id="fileInput"
+                       aria-label="Choose file to upload" />
+                <div class="dz-icon">☁️</div>
+                <div class="dz-text">Drag &amp; drop your file here</div>
+                <div class="dz-hint">or click to browse from your computer</div>
+            </div>
+
+            <!-- Selected file preview strip -->
+            <div id="filePreview">
+                <span class="file-icon" id="fileTypeIcon">📄</span>
+                <div class="file-info">
+                    <div class="file-name" id="fileName">—</div>
+                    <div class="file-size" id="fileSize">—</div>
+                </div>
+                <button type="button" class="remove-btn" id="removeFile"
+                        title="Remove file" aria-label="Remove selected file">✕</button>
+            </div>
+
+            <!-- Upload progress bar -->
+            <div id="progressWrap">
+                <div class="progress-label">
+                    <span>Uploading…</span>
+                    <span id="progressPct">0%</span>
+                </div>
+                <div class="progress-bar-bg">
+                    <div id="progressBar"></div>
+                </div>
+            </div>
+
+            <button type="button" class="btn btn-upload" id="uploadBtn" disabled>
+                <span>⬆️</span> Upload File
+            </button>
+
+        </form>
+
+        <hr class="divider" />
+
+        <!-- ── DOWNLOAD SECTION ───────────────────────────────── -->
+        <p class="section-title">Download a File</p>
+
+        <div class="input-group">
+            <input type="text"
+                   id="downloadFileName"
+                   placeholder="e.g. photo.jpg"
+                   aria-label="File name to download" />
+            <!--
+                th:href  → resolves /file/download/ with context-path prepended.
+                           JavaScript will override this href dynamically before click.
+            -->
+            <a th:href="@{/file/download/}"
+               id="downloadLink"
+               class="btn btn-download"
+               style="text-decoration:none; margin-top:0; width:auto; padding:0.75rem 1.2rem;">
+                <span>⬇️</span> Download
+            </a>
+        </div>
+
+    </div>
+
+    <!-- Toast notification -->
+    <div id="toast" role="alert" aria-live="polite"></div>
+
+    <!--
+        th:inline="javascript" lets Thymeleaf evaluate expressions inside the script block.
+        @{/file/upload}   → /productcart/file/upload
+        @{/file/download} → /productcart/file/download
+    -->
+    <script th:inline="javascript">
+        /* URLs resolved by Thymeleaf — context-path is baked in automatically */
+        const UPLOAD_URL   = /*[[ @{/file/upload} ]]*/   '/file/upload';
+        const DOWNLOAD_URL = /*[[ @{/file/download} ]]*/ '/file/download';
+
+        /* ── Utility helpers ──────────────────────────────────── */
+        function showToast(message, type, duration) {
+            duration = duration || 3500;
+            const toast = document.getElementById('toast');
+            const icons = { success: '✅', error: '❌', info: 'ℹ️' };
+            toast.textContent = (icons[type] || 'ℹ️') + '  ' + message;
+            toast.className = 'show ' + (type || 'info');
+            clearTimeout(toast._timer);
+            toast._timer = setTimeout(function () { toast.className = ''; }, duration);
+        }
+
+        function formatBytes(bytes) {
+            if (bytes === 0) return '0 B';
+            var k = 1024, sizes = ['B', 'KB', 'MB', 'GB'];
+            var i = Math.floor(Math.log(bytes) / Math.log(k));
+            return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+        }
+
+        function fileTypeIcon(name) {
+            var ext = name.split('.').pop().toLowerCase();
+            var map = {
+                jpg:'🖼️', jpeg:'🖼️', png:'🖼️', gif:'🖼️', svg:'🖼️', webp:'🖼️',
+                pdf:'📕', doc:'📘', docx:'📘', xls:'📗', xlsx:'📗',
+                ppt:'📙', pptx:'📙', zip:'🗜️', rar:'🗜️',
+                mp4:'🎬', mov:'🎬', avi:'🎬', mp3:'🎵', wav:'🎵',
+                txt:'📝', csv:'📊', json:'📋', xml:'📋', html:'🌐',
+                java:'☕', js:'📜', ts:'📜', py:'🐍'
+            };
+            return map[ext] || '📄';
+        }
+
+        /* ── DOM references ───────────────────────────────────── */
+        var dropZone      = document.getElementById('dropZone');
+        var fileInput     = document.getElementById('fileInput');
+        var filePreview   = document.getElementById('filePreview');
+        var fileNameEl    = document.getElementById('fileName');
+        var fileSizeEl    = document.getElementById('fileSize');
+        var fileIconEl    = document.getElementById('fileTypeIcon');
+        var removeFileBtn = document.getElementById('removeFile');
+        var uploadBtn     = document.getElementById('uploadBtn');
+        var progressWrap  = document.getElementById('progressWrap');
+        var progressBar   = document.getElementById('progressBar');
+        var progressPct   = document.getElementById('progressPct');
+        var downloadLink  = document.getElementById('downloadLink');
+        var downloadInput = document.getElementById('downloadFileName');
+
+        /* ── Drag & drop highlight ────────────────────────────── */
+        ['dragenter', 'dragover'].forEach(function (evt) {
+            dropZone.addEventListener(evt, function (e) {
+                e.preventDefault();
+                dropZone.classList.add('drag-over');
+            });
+        });
+        ['dragleave', 'drop'].forEach(function (evt) {
+            dropZone.addEventListener(evt, function (e) {
+                e.preventDefault();
+                dropZone.classList.remove('drag-over');
+            });
+        });
+        dropZone.addEventListener('drop', function (e) {
+            if (e.dataTransfer.files.length) {
+                fileInput.files = e.dataTransfer.files;
+                handleFileSelect();
+            }
+        });
+
+        /* ── File selection ───────────────────────────────────── */
+        fileInput.addEventListener('change', handleFileSelect);
+
+        function handleFileSelect() {
+            var file = fileInput.files[0];
+            if (!file) return;
+            fileNameEl.textContent    = file.name;
+            fileSizeEl.textContent    = formatBytes(file.size);
+            fileIconEl.textContent    = fileTypeIcon(file.name);
+            filePreview.style.display = 'flex';
+            uploadBtn.disabled        = false;
+            progressWrap.style.display = 'none';
+            progressBar.style.width    = '0%';
+            progressPct.textContent    = '0%';
+        }
+
+        /* ── Remove selected file ─────────────────────────────── */
+        removeFileBtn.addEventListener('click', function () {
+            fileInput.value            = '';
+            filePreview.style.display  = 'none';
+            uploadBtn.disabled         = true;
+            progressWrap.style.display = 'none';
+        });
+
+        /* ── Upload (XHR for progress tracking) ──────────────── */
+        uploadBtn.addEventListener('click', function () {
+            var file = fileInput.files[0];
+            if (!file) { showToast('Please select a file first.', 'info'); return; }
+
+            var formData = new FormData();
+            formData.append('file', file);   /* must match @RequestParam("file") */
+
+            var xhr = new XMLHttpRequest();
+
+            xhr.upload.addEventListener('progress', function (ev) {
+                if (ev.lengthComputable) {
+                    var pct = Math.round((ev.loaded / ev.total) * 100);
+                    progressWrap.style.display = 'block';
+                    progressBar.style.width    = pct + '%';
+                    progressPct.textContent    = pct + '%';
+                }
+            });
+
+            xhr.addEventListener('load', function () {
+                uploadBtn.disabled = false;
+                if (xhr.status === 200) {
+                    progressBar.style.width = '100%';
+                    progressPct.textContent = '100%';
+                    showToast('File "' + file.name + '" uploaded successfully!', 'success');
+                    /* Auto-fill download field with the uploaded filename */
+                    downloadInput.value = file.name;
+                } else {
+                    showToast('Upload failed (HTTP ' + xhr.status + '). Please try again.', 'error');
+                }
+            });
+
+            xhr.addEventListener('error', function () {
+                uploadBtn.disabled = false;
+                showToast('Network error. Please check your connection.', 'error');
+            });
+
+            uploadBtn.disabled = true;
+            xhr.open('POST', UPLOAD_URL);
+            xhr.send(formData);
+        });
+
+        /* ── Download — update anchor href dynamically ────────── */
+        downloadLink.addEventListener('click', function (e) {
+            var name = downloadInput.value.trim();
+            if (!name) {
+                e.preventDefault();
+                showToast('Please enter a file name to download.', 'info');
+                return;
+            }
+            /* Build URL: /productcart/file/download/{fileName} */
+            downloadLink.href = DOWNLOAD_URL + '/' + encodeURIComponent(name);
+            showToast('Downloading "' + name + '"…', 'info');
+        });
+
+        /* ── Download on Enter key ────────────────────────────── */
+        downloadInput.addEventListener('keydown', function (e) {
+            if (e.key === 'Enter') downloadLink.click();
+        });
+    </script>
+
+</body>
+</html>

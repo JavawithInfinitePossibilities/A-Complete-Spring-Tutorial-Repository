@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Update Member — NextGen LMS</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}" href="../static/css/style.css" />
+</head>
+<body>
+
+    <!-- ── Top Navigation Bar ───────────────────────────── -->
+    <header class="navbar">
+        <div class="navbar-brand">
+            <span class="navbar-icon">📚</span>
+            <span class="navbar-title">NextGen LMS</span>
+        </div>
+        <nav class="navbar-links">
+            <a th:href="@{/}"        class="nav-link">🏠 Home</a>
+            <a th:href="@{/}"        class="nav-link">📖 Books</a>
+            <a th:href="@{/members}" class="nav-link nav-link--active">👥 Members</a>
+            <a th:href="@{/borrow}"  class="nav-link">🤝 Borrow</a>
+            <a th:href="@{/return}"  class="nav-link">↩️ Return</a>
+        </nav>
+    </header>
+
+    <!-- ── Page Content ─────────────────────────────────── -->
+    <main class="page-content">
+
+        <!-- Breadcrumb -->
+        <nav class="breadcrumb">
+            <a th:href="@{/members}">👥 Members</a>
+            <span class="breadcrumb-sep">›</span>
+            <span class="breadcrumb-current">Edit Member</span>
+        </nav>
+
+        <!-- Form Card -->
+        <div class="form-card">
+
+            <div class="form-card-header">
+                <span class="form-card-icon">✏️</span>
+                <div>
+                    <h1 class="form-title">Edit Member</h1>
+                    <p class="form-subtitle">Update the member's details below and save your changes.</p>
+                </div>
+            </div>
+
+            <!--
+                th:action  → POST to /member/update (context-path prepended automatically)
+                th:object  → binds form fields to the 'member' model attribute
+            -->
+            <form th:action="@{/member/update}" th:object="${member}" method="post" novalidate>
+
+                <!--
+                    Hidden field — carries the member's database ID so the
+                    controller knows which record to update.
+                -->
+                <input type="hidden" th:field="*{id}" />
+
+                <div class="form-group">
+                    <label for="name">Full Name <span class="required">*</span></label>
+                    <input type="text"
+                           id="name"
+                           th:field="*{name}"
+                           placeholder="e.g. John Doe"
+                           required />
+                </div>
+
+                <div class="form-group">
+                    <label for="memberId">Member ID <span class="required">*</span></label>
+                    <input type="text"
+                           id="memberId"
+                           th:field="*{memberId}"
+                           placeholder="e.g. MID-001"
+                           required />
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary btn-block">
+                        💾 Save Changes
+                    </button>
+                    <a th:href="@{/members}" class="btn btn-secondary btn-block">
+                        ✕ Cancel
+                    </a>
+                </div>
+
+            </form>
+        </div>
+
+    </main>
+
+    <!-- ── Footer ───────────────────────────────────────── -->
+    <footer class="footer">
+        <p class="footer-text">© 2026 NextGen Library Management System</p>
+    </footer>
+
+</body>
+</html>

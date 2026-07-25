@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Return a Book — NextGen LMS</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}" href="../static/css/style.css" />
+</head>
+<body>
+
+    <!-- ── Top Navigation Bar ───────────────────────────── -->
+    <header class="navbar">
+        <div class="navbar-brand">
+            <span class="navbar-icon">📚</span>
+            <span class="navbar-title">NextGen LMS</span>
+        </div>
+        <nav class="navbar-links">
+            <a th:href="@{/}"        class="nav-link">🏠 Home</a>
+            <a th:href="@{/}"        class="nav-link">📖 Books</a>
+            <a th:href="@{/members}" class="nav-link">👥 Members</a>
+            <a th:href="@{/borrow}"  class="nav-link">🤝 Borrow</a>
+            <a th:href="@{/return}"  class="nav-link nav-link--active">↩️ Return</a>
+        </nav>
+    </header>
+
+    <!-- ── Page Content ─────────────────────────────────── -->
+    <main class="page-content">
+
+        <!-- Breadcrumb -->
+        <nav class="breadcrumb">
+            <a th:href="@{/lms}">🏠 Home</a>
+            <span class="breadcrumb-sep">›</span>
+            <span class="breadcrumb-current">Return a Book</span>
+        </nav>
+
+        <!-- Form Card -->
+        <div class="form-card">
+
+            <div class="form-card-header">
+                <span class="form-card-icon">↩️</span>
+                <div>
+                    <h1 class="form-title">Return a Book</h1>
+                    <p class="form-subtitle">Select the borrowing record to mark the book as returned.</p>
+                </div>
+            </div>
+
+            <!--
+                th:action  → POST to /return (context-path prepended automatically)
+                name="borrowingId" matches @RequestParam in the controller
+            -->
+            <form th:action="@{/return}" method="post" novalidate>
+
+                <div class="form-group">
+                    <label for="borrower">Borrowing Record ID <span class="required">*</span></label>
+                    <select id="borrower" name="borrowingId" required>
+                        <option value="" disabled selected>— Select a borrowing record —</option>
+                        <!--
+                            th:each  → iterates over 'borrowers' model attribute
+                            th:value → binds borrower.id as the option value
+                            th:text  → displays borrower.id as the visible label
+                        -->
+                        <option th:each="borrower : ${borrowers}"
+                                th:value="${borrower.id}"
+                                th:text="'Record #' + ${borrower.id}">Record #1</option>
+                    </select>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary btn-block">
+                        ↩️ Confirm Return
+                    </button>
+                    <a th:href="@{/}" class="btn btn-secondary btn-block">
+                        ✕ Cancel
+                    </a>
+                </div>
+
+            </form>
+        </div>
+
+    </main>
+
+    <!-- ── Footer ───────────────────────────────────────── -->
+    <footer class="footer">
+        <p class="footer-text">© 2026 NextGen Library Management System</p>
+    </footer>
+
+</body>
+</html>

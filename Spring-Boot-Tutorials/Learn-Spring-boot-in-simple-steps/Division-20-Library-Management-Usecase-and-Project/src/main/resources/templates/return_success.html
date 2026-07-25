@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Return Successful — NextGen LMS</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}" href="../static/css/style.css" />
+</head>
+<body>
+
+    <!-- ── Top Navigation Bar ───────────────────────────── -->
+    <header class="navbar">
+        <div class="navbar-brand">
+            <span class="navbar-icon">📚</span>
+            <span class="navbar-title">NextGen LMS</span>
+        </div>
+        <nav class="navbar-links">
+            <a th:href="@{/}"        class="nav-link">🏠 Home</a>
+            <a th:href="@{/}"        class="nav-link">📖 Books</a>
+            <a th:href="@{/members}" class="nav-link">👥 Members</a>
+            <a th:href="@{/borrow}"  class="nav-link">🤝 Borrow</a>
+            <a th:href="@{/return}"  class="nav-link">↩️ Return</a>
+        </nav>
+    </header>
+
+    <!-- ── Page Content ─────────────────────────────────── -->
+    <main class="page-content">
+
+        <!-- Success Card -->
+        <div class="success-card">
+
+            <div class="success-card__icon">📗</div>
+
+            <h1 class="success-card__title">Return Successful!</h1>
+
+            <!--
+                th:text → displays the 'message' model attribute sent by the controller
+            -->
+            <p class="success-card__message" th:text="${message}">
+                The book has been returned successfully.
+            </p>
+
+            <div class="success-card__actions">
+                <a th:href="@{/return}" class="btn btn-primary">
+                    ↩️ Return Another Book
+                </a>
+                <a th:href="@{/borrow}" class="btn btn-secondary">
+                    🤝 Borrow a Book
+                </a>
+                <a th:href="@{/}" class="btn btn-secondary">
+                    🏠 Home
+                </a>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- ── Footer ───────────────────────────────────────── -->
+    <footer class="footer">
+        <p class="footer-text">© 2026 NextGen Library Management System</p>
+    </footer>
+
+</body>
+</html>

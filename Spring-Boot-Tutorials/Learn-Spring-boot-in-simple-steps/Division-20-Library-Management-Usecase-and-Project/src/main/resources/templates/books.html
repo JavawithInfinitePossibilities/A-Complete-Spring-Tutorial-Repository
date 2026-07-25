@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Books — NextGen LMS</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}" href="../static/css/style.css" />
+</head>
+<body>
+
+    <!-- ── Top Navigation Bar ───────────────────────────── -->
+    <header class="navbar">
+        <div class="navbar-brand">
+            <span class="navbar-icon">📚</span>
+            <span class="navbar-title">NextGen LMS</span>
+        </div>
+        <nav class="navbar-links">
+            <a th:href="@{/}"        class="nav-link">🏠 Home</a>
+            <a th:href="@{/}"        class="nav-link nav-link--active">📖 Books</a>
+            <a th:href="@{/members}" class="nav-link">👥 Members</a>
+            <a th:href="@{/borrow}"  class="nav-link">🤝 Borrow</a>
+            <a th:href="@{/return}"  class="nav-link">↩️ Return</a>
+        </nav>
+    </header>
+
+    <!-- ── Page Content ─────────────────────────────────── -->
+    <main class="page-content">
+
+        <!-- Page heading + action button -->
+        <div class="page-header">
+            <div class="page-header__text">
+                <h1 class="page-title">Book Catalogue</h1>
+                <p class="page-subtitle" th:text="'Showing ' + ${#lists.size(books)} + ' book(s) in the library'">
+                    Showing books in the library
+                </p>
+            </div>
+            <a th:href="@{/book/new}" class="btn btn-primary">＋ Add New Book</a>
+        </div>
+
+        <!-- ── Books Table ──────────────────────────────── -->
+        <div class="table-card">
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th class="col-num">#</th>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>ISBN</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Populated by Thymeleaf: iterates over the 'books' model attribute -->
+                    <tr th:each="book, stat : ${books}" th:classappend="${stat.odd} ? 'row-odd' : 'row-even'">
+                        <td class="col-num" th:text="${stat.count}">1</td>
+                        <td>
+                            <span class="book-title" th:text="${book.title}">Book Title</span>
+                        </td>
+                        <td th:text="${book.author}">Author Name</td>
+                        <td><code class="isbn" th:text="${book.isbn}">000-0000000000</code></td>
+                    </tr>
+
+                    <!-- Empty state row — shown only when the list is empty -->
+                    <tr th:if="${#lists.isEmpty(books)}" class="row-empty">
+                        <td colspan="4">
+                            <div class="empty-state">
+                                <span class="empty-state__icon">📭</span>
+                                <p class="empty-state__text">No books found. Add your first book!</p>
+                                <a th:href="@{/book/new}" class="btn btn-primary">＋ Add New Book</a>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- ── Quick Actions ───────────────────────────── -->
+        <div class="action-bar">
+            <a th:href="@{/borrow}"   class="btn btn-secondary">🤝 Borrow a Book</a>
+            <a th:href="@{/return}"   class="btn btn-secondary">↩️ Return a Book</a>
+            <a th:href="@{/members}"  class="btn btn-secondary">👥 View Members</a>
+        </div>
+
+    </main>
+
+    <!-- ── Footer ───────────────────────────────────────── -->
+    <footer class="footer">
+        <p class="footer-text">© 2026 NextGen Library Management System</p>
+    </footer>
+
+</body>
+</html>

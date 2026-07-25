@@ -1,5 +1,6 @@
 package com.tutorials.sid.spring;
 
+import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 /**
@@ -7,5 +8,7 @@ import org.springframework.boot.test.context.SpringBootTest;
  */
 @SpringBootTest( classes = Division18Validations.class)
 public class Division18ValidationsTest {
-
+    @Test
+    void test() {
+    }
 }

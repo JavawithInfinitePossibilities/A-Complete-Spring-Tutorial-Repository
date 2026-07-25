@@ -33,5 +33,7 @@
 		<module>Division-16-Messaging-and-Spring-JMS</module>
 		<module>Division-17-Swagger-REST-Documentation-Quickstart</module>
 		<module>Division-18-Validations</module>
+        <module>Division-19-REST-File-Upload-and-Download</module>
+		<module>Division-20-Library-Management-Usecase-and-Project</module>
 	</modules>
 </project>
