@@ -35,5 +35,10 @@
 		<module>Division-18-Validations</module>
         <module>Division-19-REST-File-Upload-and-Download</module>
 		<module>Division-20-Library-Management-Usecase-and-Project</module>
+        <module>Division-21-Spring-Reactive-Programming</module>
+        <module>Division-22-Use-Reactive-MongoDB</module>
+		<module>Division-23-Reactive-Testing</module>
+		<module>Division-24-RSockets</module>
+		<module>Division-24-RSockets-client</module>
 	</modules>
 </project>
