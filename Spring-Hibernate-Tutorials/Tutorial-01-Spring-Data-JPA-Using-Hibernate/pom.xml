@@ -1,0 +1,87 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.tutorials.sid.spring</groupId>
+        <artifactId>Spring-Hibernate-Tutorials</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>Tutorial-01-Spring-Data-JPA-Using-Hibernate</artifactId>
+    <packaging>pom</packaging>
+
+    <name>Tutorial-01-Spring-Data-JPA-Using-Hibernate</name>
+    <url>http://maven.apache.org</url>
+    <modules>
+        <module>SpringBoot-MOCK-Data-App</module>
+        <module>Section-01-Introduction</module>
+        <module>Section-02-Software-Setup</module>
+        <module>Section-03-Troubleshooting-And-Completed-Projects</module>
+        <module>Section-04-ORM-Basics</module>
+        <module>Section-05-Simple-CRUD-Operation</module>
+        <module>Section-06-generators</module>
+        <module>Section-07-Spring-Data-Finder-Methods</module>
+        <module>Section-08-Paging-And-Sorting</module>
+        <module>Section-09-JPQL</module>
+        <module>Section-10-Paging-And-Sorting-With-JPQL</module>
+        <module>Section-11-Native-SQL-Query</module>
+        <module>Section-12-Inheritance-Mapping</module>
+        <module>Section-13-Componrnt-Mapping</module>
+        <module>Section-14-Relationships-in-Hibernate</module>
+        <module>Section-15-Many-to-Many-Association</module>
+        <module>Section-16-One-to-One-Mapping</module>
+        <module>Section-17-Hibernate-Caching-Mechanism</module>
+        <module>Section-18-Transection-Management</module>
+        <module>Section-19-Save-and-Retrieve-File</module>
+        <module>Section-20-Calling-Stored-procedures</module>
+        <module>Section-21-End-To-End-Mini-Project</module>
+        <module>Section-22-Working-With-MongoDB</module>
+        <module>Section-23-Composite-Primary-Keys</module>
+        <module>Section-24-Clinical-Data-Collection</module>
+    </modules>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <spring.boot.version>3.5.14</spring.boot.version>
+    </properties>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>commons-io</groupId>
+                <artifactId>commons-io</artifactId>
+                <version>2.14.0</version>
+            </dependency>
+            <!-- Import Spring Boot BOM to control versions for Spring artifacts -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring.boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>com.mysql</groupId>
+                <artifactId>mysql-connector-j</artifactId>
+                <version>8.2.0</version>
+                <scope>runtime</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

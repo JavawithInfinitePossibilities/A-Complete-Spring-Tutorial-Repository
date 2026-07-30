@@ -1,0 +1,46 @@
+package com.tutorials.sid.spring.services;
+
+import com.tutorials.sid.spring.entity.CarEntity;
+import com.tutorials.sid.spring.repository.CarRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+
+/**
+ * @author kunmu On 30-12-2023
+ */
+@Service
+public class CarServices {
+
+    @Autowired
+    private CarRepository carRepository;
+
+    public CarEntity createCarDetails(CarEntity car) {
+        return carRepository.save(car);
+    }
+
+    public List<CarEntity> createCarDetailsList(List<CarEntity> car) {
+        return (List<CarEntity>) carRepository.saveAll(car);
+    }
+
+    public List<CarEntity> getAllCarDetails() {
+        return (List<CarEntity>) carRepository.findAll();
+    }
+
+    public CarEntity getCarDetailsById(Integer id) {
+        return carRepository.findById(id).orElseThrow(() -> new RuntimeException("Car not found with id: " + id));
+    }
+
+    public List<CarEntity> getCarDetailsByMakeName(String make){
+        return carRepository.findByMake(make);
+    }
+
+    public List<CarEntity> getCarDetailsByColor(String color){
+        return carRepository.findByColor(color);
+    }
+
+    public List<CarEntity> getCarDetailsByYear(Integer start,Integer end){
+        return carRepository.findByYearBetween(start,end);
+    }
+}
