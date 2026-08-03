@@ -9,6 +9,7 @@ pipeline {
 
     parameters{
         booleanParam(defaultValue: false, description: "Enable services?", name: "myBoolean")
+        string(defaultValue: "TEST", description: "Which environment would you like to deploy", name: "deployEnv")
     }
 
     environment {
@@ -99,6 +100,7 @@ pipeline {
         stage("Demo"){
             steps{
                 echo "boolean param is set to: ${params.myBoolean}"
+                echo "Environment details : ${params.deployEnv}"
             }
         }
     }
