@@ -7,6 +7,10 @@ pipeline {
         jdk   'JDK-21'
     } */
 
+    parameters{
+        booleanParam(defaultValue: false, description: "Enable services?", name: "myBoolean")
+    }
+
     environment {
         // Skip Maven test execution across all modules
         MAVEN_OPTS = '-Dmaven.test.skip=true'
@@ -89,6 +93,12 @@ pipeline {
                     allowEmptyArchive: true,
                     fingerprint: true
                 )
+            }
+        }
+
+        stage("Demo"){
+            steps{
+                echo "boolean param is set to: ${params.myBoolean}"
             }
         }
     }
