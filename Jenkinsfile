@@ -6,11 +6,11 @@ pipeline {
         maven 'Maven-3'
         jdk   'JDK-21'
     } */
-
-    parameters{
+    /* This is a test section */
+    /* parameters{
         booleanParam(defaultValue: false, description: "Enable services?", name: "myBoolean")
         string(defaultValue: "TEST", description: "Which environment would you like to deploy", name: "deployEnv")
-    }
+    } */
 
     environment {
         // Skip Maven test execution across all modules
@@ -97,12 +97,13 @@ pipeline {
             }
         }
 
-        stage("Demo"){
+        /* This Is the test Section*/
+        /* stage("Demo"){
             steps{
                 echo "boolean param is set to: ${params.myBoolean}"
                 echo "Environment details : ${params.deployEnv}"
             }
-        }
+        } */
     }
 
     post {
