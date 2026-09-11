@@ -13,8 +13,9 @@ import com.tutorials.sid.spring.model.dto.Coupon;
  * @author Lenovo
  *
  */
-/*@FeignClient("COUPON-SERVICES")*/
+
 @FeignClient("APIGATEWAY-SERVICES")
+/*@FeignClient("COUPON-SERVICES")*/
 public interface IFeignCouponClient {
 
 	@GetMapping("/couponcart/couponapi/getcoupon/{couponCode}")

@@ -30,5 +30,4 @@ public class CustomFilter implements GlobalFilter {
 			System.out.println("Post Processing Logic Goes Here " + exchange.getResponse());
 		}));
 	}
-
 }
