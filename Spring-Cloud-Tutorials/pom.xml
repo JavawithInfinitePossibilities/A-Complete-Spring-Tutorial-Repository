@@ -17,7 +17,5 @@
 
     <modules>
         <module>Spring-Cloud-Fundamentals</module>
-        <module>Microservices-with-Spring-Boot-and-Spring-Cloud</module>
-        <module>Spring-Boot-Microservices-CQRS-SAGA-Axon-Framework</module>
     </modules>
 </project>
