@@ -16,7 +16,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <Project.name>Section-07-CSRF</Project.name>
-        <start-class>com.tutorials.sid.spring.Division17SwaggerRESTDocumentationQuickstart</start-class>
+        <start-class>com.tutorials.sid.spring.Section07CSRF</start-class>
     </properties>
 
     <dependencies>

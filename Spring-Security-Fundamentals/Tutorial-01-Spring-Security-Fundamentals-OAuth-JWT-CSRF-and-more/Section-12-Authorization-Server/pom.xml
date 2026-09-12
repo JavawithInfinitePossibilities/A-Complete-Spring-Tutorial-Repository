@@ -15,7 +15,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <Project.name>Section-12-Authorization-Server</Project.name>
-        <start-class>com.tutorials.sid.spring.Division17SwaggerRESTDocumentationQuickstart</start-class>
+        <start-class>com.tutorials.sid.spring.Section12AuthorizationServer</start-class>
     </properties>
 
     <build>

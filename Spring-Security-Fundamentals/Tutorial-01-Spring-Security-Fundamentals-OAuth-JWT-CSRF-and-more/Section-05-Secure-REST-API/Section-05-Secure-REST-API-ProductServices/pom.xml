@@ -16,7 +16,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <Project.name>Section-05-Secure-REST-API-ProductServices</Project.name>
-        <start-class>com.tutorials.sid.spring.Division17SwaggerRESTDocumentationQuickstart</start-class>
+        <start-class>com.tutorials.sid.spring.Section05SecureRESTAPIProductServices</start-class>
     </properties>
 
     <dependencies>
@@ -94,5 +94,6 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
+
     </dependencies>
 </project>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Product List</title>
+    <link rel="stylesheet" th:href="@{/css/product.css}"/>
+</head>
+<body>
+
+<!-- Navbar -->
+<header class="navbar">
+    <a class="brand" th:href="@{/productapi/}">🛒 Product Manager</a>
+    <nav>
+        <a th:href="@{/productapi/}">Home</a>
+        <a th:href="@{/productapi/save}">Add Product</a>
+        <a th:href="@{/productapi/search}">Search</a>
+        <!-- Logout uses POST to satisfy Spring Security's CSRF protection -->
+        <form th:action="@{/productapi/logout}" method="post" style="display:inline;">
+            <button type="submit" class="btn-nav-logout">Logout</button>
+        </form>
+    </nav>
+</header>
+
+<div class="container">
+    <h1 class="page-title">All Products</h1>
+
+    <!-- Flash message -->
+    <div th:if="${message}" class="alert alert-success" th:text="${message}"></div>
+    <div th:if="${error}"   class="alert alert-danger"  th:text="${error}"></div>
+
+    <div class="card">
+        <!-- Table when products exist -->
+        <div th:if="${products != null and !#lists.isEmpty(products)}">
+            <table class="product-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Price (₹)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="p : ${products}">
+                        <td data-label="ID"          th:text="${p.id}"></td>
+                        <td data-label="Name"        th:text="${p.name}"></td>
+                        <td data-label="Description" th:text="${p.description}"></td>
+                        <td data-label="Price"       th:text="${#numbers.formatDecimal(p.price, 1, 2)}"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Empty state -->
+        <div th:if="${products == null or #lists.isEmpty(products)}" class="empty-state">
+            <p>No products found.</p>
+            <a th:href="@{/productapi/save}" class="btn btn-primary">Add Your First Product</a>
+        </div>
+    </div>
+
+    <a th:href="@{/productapi/save}"   class="btn btn-primary">+ Add Product</a>
+    <a th:href="@{/productapi/search}" class="btn btn-secondary">🔍 Search by ID</a>
+</div>
+
+<script th:src="@{/js/product.js}"></script>
+</body>
+</html>

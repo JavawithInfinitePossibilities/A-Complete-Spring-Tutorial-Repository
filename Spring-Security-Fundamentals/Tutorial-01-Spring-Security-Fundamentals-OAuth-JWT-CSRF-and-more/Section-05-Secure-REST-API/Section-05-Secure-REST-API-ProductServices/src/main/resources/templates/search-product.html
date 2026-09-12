@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Search Product</title>
+    <link rel="stylesheet" th:href="@{/css/product.css}"/>
+</head>
+<body>
+
+<!-- Navbar -->
+<header class="navbar">
+    <a class="brand" th:href="@{/productapi/}">🛒 Product Manager</a>
+    <nav>
+        <a th:href="@{/productapi/}">Home</a>
+        <a th:href="@{/productapi/save}">Add Product</a>
+        <a th:href="@{/productapi/search}">Search</a>
+    </nav>
+</header>
+
+<div class="container">
+    <h1 class="page-title">Search Product by ID</h1>
+
+    <!-- Error message (e.g. product not found) -->
+    <div th:if="${error}" class="alert alert-danger" th:text="${error}"></div>
+
+    <div class="card">
+        <!--
+            GET /productapi/search?productId=5
+            The controller will redirect to /productapi/product-result/{id}
+        -->
+        <form id="searchProductForm"
+              th:action="@{/productapi/search}"
+              method="get">
+
+            <div class="form-group">
+                <label for="productId">Product ID</label>
+                <input type="number"
+                       id="productId"
+                       name="productId"
+                       min="1"
+                       placeholder="Enter product ID"/>
+            </div>
+
+            <button type="submit" class="btn btn-primary">🔍 Search</button>
+            <a th:href="@{/productapi/}" class="btn btn-secondary">Back to List</a>
+        </form>
+    </div>
+</div>
+
+<script th:src="@{/js/product.js}"></script>
+</body>
+</html>

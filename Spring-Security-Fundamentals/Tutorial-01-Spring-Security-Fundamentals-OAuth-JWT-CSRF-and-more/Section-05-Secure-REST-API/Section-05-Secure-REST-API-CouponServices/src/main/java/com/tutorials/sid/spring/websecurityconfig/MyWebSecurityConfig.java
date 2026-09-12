@@ -25,7 +25,6 @@ public class MyWebSecurityConfig {
     @Autowired
     private UserDetailsServicesImpl userDetailsServicesImpl;
 
-
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.userDetailsService(userDetailsServicesImpl);
     }
@@ -33,15 +32,20 @@ public class MyWebSecurityConfig {
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http.httpBasic(Customizer.withDefaults());
-        http.authorizeHttpRequests(authorizationManagerRequestMatcherRegistry ->
-                authorizationManagerRequestMatcherRegistry
-                        /*The below requestMatchers will allow all kinds of request to send it.*/
-                        /*.requestMatchers(HttpMethod.GET, "/couponapi/getcoupon/**")*/
-                        .requestMatchers(HttpMethod.GET, "/couponapi/getcoupon/{couponCode:^[A-Z]*$}")
-                        .hasAnyRole("USER", "ADMIN")
-                        .requestMatchers(HttpMethod.POST, "/couponapi/couponsave")
-                        .hasRole("ADMIN"));
-        http.csrf(httpSecurityCsrfConfigurer -> httpSecurityCsrfConfigurer.disable());
+        http.authorizeHttpRequests(auth -> auth
+                // GET /couponapi/getcoupon/** — any authenticated user with USER or ADMIN role
+                // Using hasAnyAuthority with the full "ROLE_" prefix because
+                // Role.getAuthority() returns the name as-is from DB (e.g. "ROLE_USER")
+                // hasAnyAuthority does NOT add the ROLE_ prefix — it matches exactly
+                .requestMatchers(HttpMethod.GET, "/couponapi/getcoupon/**")
+                .hasAnyAuthority("ROLE_USER", "ROLE_ADMIN")
+                // POST /couponapi/couponsave — only ADMIN
+                .requestMatchers(HttpMethod.POST, "/couponapi/couponsave")
+                .hasAuthority("ROLE_ADMIN")
+                // All other requests must be authenticated
+                .anyRequest().authenticated()
+        );
+        http.csrf(csrf -> csrf.disable());
         return http.build();
     }
 }

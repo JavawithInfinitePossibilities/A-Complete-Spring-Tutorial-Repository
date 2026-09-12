@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Product Details</title>
+    <link rel="stylesheet" th:href="@{/css/product.css}"/>
+</head>
+<body>
+
+<!-- Navbar -->
+<header class="navbar">
+    <a class="brand" th:href="@{/productapi/}">🛒 Product Manager</a>
+    <nav>
+        <a th:href="@{/productapi/}">Home</a>
+        <a th:href="@{/productapi/save}">Add Product</a>
+        <a th:href="@{/productapi/search}">Search</a>
+    </nav>
+</header>
+
+<div class="container">
+    <h1 class="page-title">Product Details</h1>
+
+    <!-- Flash: shown after a successful save -->
+    <div th:if="${message}" class="alert alert-success" th:text="${message}"></div>
+
+    <div class="card" th:if="${product != null}">
+        <div class="result-grid">
+            <span class="label">ID</span>
+            <span class="value" th:text="${product.id}"></span>
+
+            <span class="label">Name</span>
+            <span class="value" th:text="${product.name}"></span>
+
+            <span class="label">Description</span>
+            <span class="value" th:text="${product.description}"></span>
+
+            <span class="label">Final Price</span>
+            <span class="value" th:text="'₹ ' + ${#numbers.formatDecimal(product.price, 1, 2)}"></span>
+        </div>
+    </div>
+
+    <!-- Not found case -->
+    <div th:if="${product == null}" class="empty-state">
+        <p>Product not found.</p>
+    </div>
+
+    <a th:href="@{/productapi/}"      class="btn btn-primary">← Back to List</a>
+    <a th:href="@{/productapi/save}"  class="btn btn-success">+ Add Another</a>
+    <a th:href="@{/productapi/search}" class="btn btn-secondary">🔍 Search Again</a>
+</div>
+
+<script th:src="@{/js/product.js}"></script>
+</body>
+</html>

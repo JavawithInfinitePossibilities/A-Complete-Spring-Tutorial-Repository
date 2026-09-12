@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Login – Product Manager</title>
+    <link rel="stylesheet" th:href="@{/css/product.css}"/>
+</head>
+<body>
+
+<div class="login-wrapper">
+    <div class="login-box">
+
+        <!-- Logo / Branding -->
+        <div class="login-logo">🛒</div>
+        <h1 class="login-title">Product Manager</h1>
+        <p class="login-subtitle">Sign in to manage your products</p>
+
+        <!-- Error: bad credentials -->
+        <div th:if="${param.error}" class="alert alert-danger">
+            Invalid username or password. Please try again.
+        </div>
+
+        <!-- Info: logged out -->
+        <div th:if="${param.logout}" class="alert alert-success">
+            You have been logged out successfully.
+        </div>
+
+        <!--
+            action must match loginProcessingUrl in security config → /productapi/login
+            Spring Security handles the POST automatically — no controller method needed.
+            The hidden CSRF token is injected by Thymeleaf automatically.
+        -->
+        <form th:action="@{/productapi/login}" method="post">
+
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text"
+                       id="username"
+                       name="username"
+                       placeholder="Enter your username"
+                       autofocus
+                       autocomplete="username"/>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password"
+                       id="password"
+                       name="password"
+                       placeholder="Enter your password"
+                       autocomplete="current-password"/>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-login">Sign In</button>
+        </form>
+
+        <div class="login-footer">
+            After login you will be redirected to the
+            <a th:href="@{/productapi/}">Home Page</a>
+        </div>
+
+    </div>
+</div>
+
+<script th:src="@{/js/product.js}"></script>
+</body>
+</html>
